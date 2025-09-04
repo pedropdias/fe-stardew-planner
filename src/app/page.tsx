@@ -1,11 +1,20 @@
 "use client"
 
 import {useAppContextProvider} from "@/providers/AppContextProvider";
+import {useRouter} from "next/navigation";
+import {useEffect} from "react";
 
 export default function Home() {
   const { user, authLoading, signInWithGoogle, signOut } = useAppContextProvider()
+  const router = useRouter();
 
-  if (authLoading) return <p>Loading...</p>
+  useEffect(() => {
+    if (!authLoading && !user) {
+      router.push("/login");
+    }
+  }, [authLoading, user, router]);
+
+  if (authLoading) return <p>Loading...</p>;
 
   return (
     <div className="font-sans flex justify-center items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 w-[100vw] h-[100vh]">
