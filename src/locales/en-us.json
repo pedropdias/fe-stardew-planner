@@ -1,0 +1,21 @@
+{
+  "login": {
+    "googleButton": "Continue with Google"
+  },
+  "saves": {
+    "title": "My saves",
+    "subTitle": "Create and sleep in your saves to update the saves board",
+    "saveCard": {
+      "farmer": "Farmer: {{playerName}}",
+      "money": "Money: {{money}}g"
+    },
+    "selectedCard": {
+      "season": "Season: {{season}}",
+      "year": "Year: {{year}}",
+      "day": "Day: {{day}}",
+      "pendingTasks": "Pending tasks: {{pendingTasks}}",
+      "money": "Money: {{money}}g",
+      "button": "Open board"
+    }
+  }
+}

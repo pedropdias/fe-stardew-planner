@@ -1,0 +1,21 @@
+{
+  "login": {
+    "googleButton": "Continue com Google"
+  },
+  "saves": {
+    "title": "Meus saves",
+    "subTitle": "Crie e durma em seus saves para atualizar o quadro de saves",
+    "saveCard": {
+      "farmer": "Fazendeiro: {{playerName}}",
+      "money": "Dinheiro: {{money}}g"
+    },
+    "selectedCard": {
+      "season": "Estação: {{season}}",
+      "year": "Ano: {{year}}",
+      "day": "Dia: {{day}}",
+      "pendingTasks": "Missões pendentes: {{pendingTasks}}",
+      "money": "Dinheiro: {{money}}g",
+      "button": "Abrir quadro"
+    }
+  }
+}

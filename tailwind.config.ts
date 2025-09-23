@@ -9,7 +9,12 @@ module.exports = {
     extend: {
       fontFamily: {
         outfit: ["Outfit", "sans-serif"],
+        stardewSimple: ["var(--font-stardew-simple)", "sans-serif"],
+        stardewMain: ["var(--font-stardew-main)", "sans-serif"],
       },
+    },
+    colors: {
+      cardBackground: "var(--card-background)",
     },
   },
   plugins: [],

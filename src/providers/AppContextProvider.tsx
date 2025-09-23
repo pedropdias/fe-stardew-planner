@@ -3,12 +3,46 @@
 import {createContext, useContext, useEffect, useState} from "react";
 import {AppContextType} from "@/types/AppContextProviderType";
 import {supabase} from "@/api/supabase/supabaseClient";
+import ptBR from "@/locales/pt-br.json";
+import enUS from "@/locales/en-us.json";
+
+const messages = {
+  "pt-BR": ptBR,
+  "en-US": enUS,
+}
 
 const AppContext = createContext<AppContextType | undefined>(undefined);
 
 export function AppProvider({ children }: { children: React.ReactNode }) {
   const [user, setUser] = useState<any | null>(null);
   const [authLoading, setAuthLoading] = useState<boolean>(true);
+  const [selectedSave, setSelectedSave] = useState({});
+  const [locale, setLocaleState] = useState<"pt-BR" | "en-US">("en-US");
+
+  useEffect(() => {
+    const stored = localStorage.getItem("locale") as "pt-BR" | "en-US" | null;
+    if (stored) {
+      setLocaleState(stored);
+    }
+  }, []);
+
+  const setLocale = (loc: "pt-BR" | "en-US") => {
+    setLocaleState(loc);
+    localStorage.setItem("locale", loc);
+  };
+
+  const t = (key: string, vars: Record<string, string> = {}) => {
+    const keys = key.split(".");
+    let value: any = messages[locale];
+    for (const k of keys) {
+      value = value?.[k];
+    }
+    if (!value) return key;
+    return Object.keys(vars).reduce(
+      (str, v) => str.replace(`{{${v}}}`, vars[v]),
+      value
+    );
+  };
 
   useEffect(() => {
     supabase.auth.getUser().then(({ data }) => {
@@ -26,7 +60,7 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
     return () => {
       authListener.subscription.unsubscribe()
     }
-  })
+  }, [])
 
   const signInWithGoogle = async () => {
     await supabase.auth.signInWithOAuth({ provider: "google" })
@@ -43,6 +77,11 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
         authLoading,
         signInWithGoogle,
         signOut,
+        selectedSave,
+        setSelectedSave,
+        locale,
+        setLocale,
+        t,
       }}
     >
       {children}
