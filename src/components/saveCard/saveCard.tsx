@@ -1,7 +1,7 @@
 import {formatDayWithSuffix} from "@/utils/dayFormatter";
 import {useAppContextProvider} from "@/providers/AppContextProvider";
 
-export default function SaveCard({data}: {data: any}) {
+export default function SaveCard({data}: { data: any }) {
   const farmName = data?.save_data?.SaveGame?.player?.farmName;
   const playerName = data?.save_data?.SaveGame?.player?.name;
   const money = Number(data?.save_data?.SaveGame?.player?.money);
@@ -19,16 +19,25 @@ export default function SaveCard({data}: {data: any}) {
 
   const dayFormatted = formatDayWithSuffix(day);
 
-  const { t } = useAppContextProvider();
+  const {t} = useAppContextProvider();
 
   return (
-    <div className={"flex flex-col justify-between w-[250px] max-h-[160px] bg-[var(--card-background)] rounded-[10px] p-[16px] gap-[26px] shadow-[2px_2px_6px_0px_rgba(0,0,0,0.15)] transition-transform duration-200 hover:scale-103"}>
+    <div
+      className={"flex flex-col justify-between w-[260px] max-h-[160px] bg-transparent px-[16px] py-[20px] gap-[26px] shadow-[2px_2px_6px_0px_rgba(0,0,0,0.15)] transition-transform duration-200 hover:scale-103 hover:brightness-120"}
+      style={{
+        backgroundImage: "url('/default-card-large.png')",
+        backgroundSize: '100% 100%',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+        textShadow: "2px 2px 0px rgba(135,52,0,0.5)"
+      }}
+    >
       <div className={"flex flex-col gap-[12px]"}>
         <h2 className={"font-[100]"}>{farmName}</h2>
-        <p>{t("saves.saveCard.farmer", { playerName })}</p>
+        <p>{t("saves.saveCard.farmer", {playerName})}</p>
       </div>
       <div className={"flex flex-col gap-[4px]"}>
-        <p>{t("saves.saveCard.money", { money: formattedMoney })}</p>
+        <p>{t("saves.saveCard.money", {money: formattedMoney})}</p>
         <p>{seasonFormatted}, {dayFormatted}, {year}</p>
       </div>
     </div>

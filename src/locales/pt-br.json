@@ -10,6 +10,7 @@
       "money": "Dinheiro: {{money}}g"
     },
     "selectedCard": {
+      "farmer": "Fazendeiro: {{farmer}}",
       "season": "Estação: {{season}}",
       "year": "Ano: {{year}}",
       "day": "Dia: {{day}}",
@@ -17,5 +18,15 @@
       "money": "Dinheiro: {{money}}g",
       "button": "Abrir quadro"
     }
+  },
+  "save": {
+    "title": "Minhas tarefas",
+    "subTitle": "Crie e gerencie suas tarefas"
+  },
+  "deleteSaveModal": {
+    "title": "Excluir save?",
+    "description": "Tem certeza que deseja excluir este save? Essa ação não pode ser desfeita.",
+    "delete": "Excluir",
+    "cancel": "Cancelar"
   }
 }

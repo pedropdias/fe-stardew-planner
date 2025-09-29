@@ -5,6 +5,7 @@ import {AppContextType} from "@/types/AppContextProviderType";
 import {supabase} from "@/api/supabase/supabaseClient";
 import ptBR from "@/locales/pt-br.json";
 import enUS from "@/locales/en-us.json";
+import {getSaves} from "@/api/services/SaveService";
 
 const messages = {
   "pt-BR": ptBR,
@@ -18,6 +19,7 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
   const [authLoading, setAuthLoading] = useState<boolean>(true);
   const [selectedSave, setSelectedSave] = useState({});
   const [locale, setLocaleState] = useState<"pt-BR" | "en-US">("en-US");
+  const [saves, setSaves] = useState([]);
 
   useEffect(() => {
     const stored = localStorage.getItem("locale") as "pt-BR" | "en-US" | null;
@@ -70,6 +72,16 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
     await supabase.auth.signOut()
   }
 
+  const fetchSaves = async (userId: string) => {
+    if (!user) return;
+    try {
+      const result = await getSaves(userId);
+      setSaves(result);
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
   return (
     <AppContext.Provider
       value={{
@@ -79,6 +91,9 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
         signOut,
         selectedSave,
         setSelectedSave,
+        saves,
+        setSaves,
+        fetchSaves,
         locale,
         setLocale,
         t,

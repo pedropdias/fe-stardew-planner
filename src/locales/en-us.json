@@ -10,6 +10,7 @@
       "money": "Money: {{money}}g"
     },
     "selectedCard": {
+      "farmer": "Farmer: {{farmer}}",
       "season": "Season: {{season}}",
       "year": "Year: {{year}}",
       "day": "Day: {{day}}",
@@ -17,5 +18,15 @@
       "money": "Money: {{money}}g",
       "button": "Open board"
     }
+  },
+  "save": {
+    "title": "My tasks",
+    "subTitle": "Create and manage your tasks"
+  },
+  "deleteSaveModal": {
+    "title": "Delete save?",
+    "description": "Are you sure you want to delete this save? This action cannot be undone.",
+    "delete": "Delete",
+    "cancel": "Cancel"
   }
 }
