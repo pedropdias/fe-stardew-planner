@@ -1,6 +1,6 @@
 import {api} from "@/api/axiosInstance";
 import {API_ENDPOINTS} from "@/api/endpoints";
-import {DeleteSaveForm} from "@/api/forms/delete-planner.form";
+import {DeleteSaveForm} from "@/api/forms/delete-save.form";
 
 export const getSaves = async (userId: string): Promise<any> => {
   const response = await api.get(API_ENDPOINTS.GET_SAVES.replace(":userId", userId));

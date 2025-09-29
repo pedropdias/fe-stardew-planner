@@ -29,7 +29,7 @@ export default function SaveCard({data}: { data: any }) {
         backgroundSize: '100% 100%',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
-        textShadow: "2px 2px 0px rgba(135,52,0,0.5)"
+        textShadow: "1px 1px 0px rgba(135,52,0,0.6)"
       }}
     >
       <div className={"flex flex-col gap-[12px]"}>

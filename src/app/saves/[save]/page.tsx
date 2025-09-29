@@ -1,17 +1,22 @@
 'use client'
 
 import {useAppContextProvider} from "@/providers/AppContextProvider";
-import {useRouter} from "next/navigation";
+import {useParams, useRouter} from "next/navigation";
 import {useEffect, useState} from "react";
 import Header from "@/components/header/header";
 import {DragAndDropContainer} from "@/components/dragAndDropContainer/dragAndDropContainer";
 import Image from "next/image";
 import TaskCard from "@/components/taskCard/taskCard";
 import PlannersSideBar from "@/components/plannersSideBar/plannersSideBar";
+import Spinner from "@/components/loadingSpinner/loadingSpinner";
+import {PlannerType} from "@/types/PlannerType";
 
 export default function SavePage() {
-  const {user, authLoading} = useAppContextProvider()
+  const {user, authLoading, fetchPlanners, loadingGetPlanners, selectedPlanner} = useAppContextProvider()
   const router = useRouter();
+  const params = useParams();
+  const rawGameSaveIdParam = params.save;
+  const gameSaveId = Array.isArray(rawGameSaveIdParam) ? rawGameSaveIdParam[0] : rawGameSaveIdParam;
 
   useEffect(() => {
     if (authLoading) return;
@@ -20,49 +25,71 @@ export default function SavePage() {
     }
   }, [authLoading, user, router]);
 
+  useEffect(() => {
+    if (!user || !gameSaveId) return;
+    fetchPlanners({userId: user.id, gameSaveId});
+  }, [user]);
+
   return (
-    <div
-      className="min-h-[100vh] bg-cover bg-center flex flex-col items-center gap-[2.5vh] select-none"
-      style={{backgroundImage: "url('/sky-wallpaper-blur.png')"}}>
-      <Header/>
+    <>
+      {loadingGetPlanners && (
+        <>
+          <div
+            className="w-[100vw] h-[100vh] fixed flex justify-center items-center inset-0 bg-[rgba(0,0,0,0.25)] backdrop-blur-sm z-[999] transition-transform"
+            style={{backdropFilter: "blur(3px)"}}
+          >
+            <Spinner />
+          </div>
+        </>
+      )}
       <div
-        className="flex justify-start w-full ml-[20px] cursor-pointer"
-        onClick={() => router.push("/saves")}
-      >
-        <Image
-          src={"/back-button.png"}
-          alt={"back-button"}
-          width={134}
-          height={55}
-          className={"transition-transform duration-50 hover:scale-103 hover:brightness-125"}
-        />
+        className="min-h-[100vh] bg-cover bg-center flex flex-col items-center gap-[2.5vh] select-none"
+        style={{backgroundImage: "url('/sky-wallpaper-blur.png')"}}>
+        <Header/>
+        <div
+          className="flex justify-start w-full ml-[20px] cursor-pointer"
+          onClick={() => router.push("/saves")}
+        >
+          <Image
+            src={"/back-button.png"}
+            alt={"back-button"}
+            width={134}
+            height={55}
+            className={"transition-transform duration-50 hover:scale-103 hover:brightness-125"}
+          />
+        </div>
+        <div className="flex justify-start w-full h-full gap-[100px] px-[24px] py-[8px]">
+          <PlannersSideBar/>
+          {selectedPlanner &&
+            <PlannerBoard planner={selectedPlanner} />
+          }
+        </div>
       </div>
-      <div className="flex justify-start w-full h-full gap-[100px] px-[24px] py-[8px]">
-        <PlannersSideBar/>
-        <TaskBoard/>
-      </div>
-    </div>
+    </>
   )
 }
 
-export function TaskBoard() {
+interface PlannerBoardProps {
+  planner: PlannerType;
+}
+
+export function PlannerBoard({planner}: PlannerBoardProps) {
 
   const {signOut, t} = useAppContextProvider()
-  const [tasks, setTasks] = useState([]);
 
   return (
     <div className="flex flex-col items-center justify-start gap-[32px] h-full">
       <div className={"flex flex-col min-h-[400px] justify-start gap-[72px]"}>
         <div className={"flex flex-col justify-start gap-[20px] text-[#FFF] font-stardewSimple font-[100]"}>
-          <h1>{t("save.title")}</h1>
-          <h3>{t("save.subTitle")}</h3>
+          <h1>{planner.name}</h1>
+          <h3>{planner.description}</h3>
         </div>
 
         <div className={"flex justify-between w-full"}>
-          <DragAndDropContainer
-            data={tasks}
-            renderCard={(cardData) => <TaskCard data={cardData}/>}
-          />
+          {/*<DragAndDropContainer*/}
+          {/*  data={tasks}*/}
+          {/*  renderCard={(cardData) => <TaskCard data={cardData}/>}*/}
+          {/*/>*/}
           {/*{selectedSave && Object.keys(selectedSave).length > 0 && <SelectedSaveCard data={selectedSave}/>}*/}
         </div>
       </div>

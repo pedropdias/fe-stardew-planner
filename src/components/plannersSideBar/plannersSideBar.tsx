@@ -1,5 +1,7 @@
+import {useAppContextProvider} from "@/providers/AppContextProvider";
+
 export default function PlannersSideBar() {
-  const planners = [1, 2, 3]
+  const { planners, setSelectedPlanner } = useAppContextProvider();
 
   return(
     <div
@@ -37,7 +39,7 @@ export default function PlannersSideBar() {
         </button>
       </div>
       <div className={"bg-[var(--card-background-5)] w-full h-[3px] my-[24px]"}/>
-      {planners.map((planner, index) => (
+      {planners?.map((planner, index) => (
         <div
           key={index}
           className={"flex justify-between items-center bg-transparent mb-[8px] px-[20px] py-[12px] shadow-[3px_3px_0px_0px_rgba(0,0,0,0.15)] cursor-pointer shadow-[2px_2px_6px_0px_rgba(0,0,0,0.15)] transition-transform duration-50 hover:scale-103 hover:brightness-120"}
@@ -47,8 +49,9 @@ export default function PlannersSideBar() {
             backgroundPosition: 'center',
             backgroundRepeat: 'no-repeat',
           }}
+          onClick={() => setSelectedPlanner(planner)}
         >
-          <p className={"text-[1.5rem] mt-[6px]"}>Planner {planner}</p>
+          <p className={"text-[1.5rem] mt-[6px]"}>Planner {planner.name}</p>
         </div>
       ))}
     </div>

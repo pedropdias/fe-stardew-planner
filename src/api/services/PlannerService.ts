@@ -1,9 +1,11 @@
 import {api} from "@/api/axiosInstance";
 import {API_ENDPOINTS} from "@/api/endpoints";
-import {DeleteSaveForm} from "@/api/forms/delete-planner.form";
+import {DeleteSaveForm} from "@/api/forms/delete-save.form";
+import {GetPlannersForm} from "@/api/forms/get-planners.form";
 
-export const getPlanners = async (userId: string): Promise<any> => {
-  const response = await api.get(API_ENDPOINTS.GET_SAVES.replace(":userId", userId));
+export const getPlanners = async ({userId, gameSaveId}: GetPlannersForm): Promise<any> => {
+  const url = `${API_ENDPOINTS.PLANNERS}?userId=${userId}&gameSaveId=${gameSaveId}`;
+  const response = await api.get(url);
   return response?.data;
 }
 

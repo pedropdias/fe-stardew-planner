@@ -11,17 +11,12 @@ import SaveCard from "@/components/saveCard/saveCard";
 import Header from "@/components/header/header";
 import SelectedSaveCard from "@/components/selectedSaveCard/selectedSaveCard";
 import ConfirmModal from "@/components/confirmModal/confirmModal";
+import Spinner from "@/components/loadingSpinner/loadingSpinner";
 
 export default function SavesPage() {
-  const {user, signOut, authLoading, selectedSave, setSelectedSave, t, fetchSaves, saves} = useAppContextProvider()
+  const {user, signOut, authLoading, selectedSave, setSelectedSave, t, fetchSaves, saves, loadingGetSaves} = useAppContextProvider()
   const router = useRouter();
   const [showModal, setShowModal] = useState(false);
-
-  const {
-    execute: executeGetSaves,
-    loading: loadingGetSaves,
-    error: errorGetSaves
-  } = useFetch(getSaves)
 
   const {
     execute: executeDeleteSave,
@@ -58,7 +53,7 @@ export default function SavesPage() {
   useEffect(() => {
     if (!user) return;
     fetchSaves(user.id);
-  }, [executeGetSaves, user]);
+  }, [user]);
 
   return (
     <>
@@ -81,11 +76,10 @@ export default function SavesPage() {
       {loadingGetSaves && (
         <>
           <div
-            className="w-[100vw] h-[100vh] fixed flex justify-center items-center inset-0 bg-[#000000B3] backdrop-blur-sm z-[999] transition-transform"
+            className="w-[100vw] h-[100vh] fixed flex justify-center items-center inset-0 bg-[rgba(0,0,0,0.25)] backdrop-blur-sm z-[999] transition-transform"
             style={{backdropFilter: "blur(3px)"}}
           >
-            <span
-              className={"absolute w-[100px] h-[100px] border-2 border-[#FFF] border-t-transparent rounded-full animate-spin"}></span>
+            <Spinner />
           </div>
         </>
       )}
@@ -100,7 +94,7 @@ export default function SavesPage() {
               <h3>{t("saves.subTitle")}</h3>
             </div>
 
-            <div className={"flex justify-between w-full"}>
+            <div className={"flex justify-between w-full min-h-[300px]"}>
               <DragAndDropContainer
                 data={saves}
                 renderCard={(cardData) => <SaveCard data={cardData}/>}
