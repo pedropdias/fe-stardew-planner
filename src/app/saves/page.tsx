@@ -12,9 +12,10 @@ import Header from "@/components/header/header";
 import SelectedSaveCard from "@/components/selectedSaveCard/selectedSaveCard";
 import ConfirmModal from "@/components/confirmModal/confirmModal";
 import Spinner from "@/components/loadingSpinner/loadingSpinner";
+import {DragAndDropType} from "@/types/dragAndDropType";
 
 export default function SavesPage() {
-  const {user, signOut, authLoading, selectedSave, setSelectedSave, t, fetchSaves, saves, loadingGetSaves} = useAppContextProvider()
+  const {user, authLoading, selectedSave, setSelectedSave, t, fetchSaves, saves, loadingGetSaves} = useAppContextProvider()
   const router = useRouter();
   const [showModal, setShowModal] = useState(false);
 
@@ -88,7 +89,7 @@ export default function SavesPage() {
         style={{backgroundImage: "url('/sky-wallpaper-blur.png')"}}>
         <Header/>
         <div className="flex flex-col items-center justify-center gap-[32px]">
-          <div className={"flex flex-col justify-center gap-[72px]"}>
+          <div className={"flex flex-col justify-center gap-[72px] mb-[100px]"}>
             <div className={"flex flex-col justify-start gap-[20px] text-[#FFF] font-stardewSimple font-[100]"}>
               <h1>{t("saves.title")}</h1>
               <h3>{t("saves.subTitle")}</h3>
@@ -98,6 +99,7 @@ export default function SavesPage() {
               <DragAndDropContainer
                 data={saves}
                 renderCard={(cardData) => <SaveCard data={cardData}/>}
+                type={"save" as DragAndDropType}
               />
               {selectedSave && Object.keys(selectedSave).length > 0 &&
                   <SelectedSaveCard data={selectedSave} setShowModal={setShowModal}/>}
@@ -109,9 +111,6 @@ export default function SavesPage() {
             width={110}
             height={110}
           />
-          <button onClick={signOut} className={"cursor-pointer mb-[100px] bg-transparent shadow-[2px_2px_6px_0px_rgba(0,0,0,0.15)] transition-transform duration-50 hover:scale-103 hover:brightness-125"}>
-            <Image src="/exit-button.png" alt="exit-button" width={157} height={100}/>
-          </button>
         </div>
       </div>
     </>

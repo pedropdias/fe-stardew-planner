@@ -1,18 +1,20 @@
-import { closestCorners, DndContext, DragOverlay } from "@dnd-kit/core";
+import {closestCorners, DndContext, DragOverlay} from "@dnd-kit/core";
 import {useEffect, useState} from "react";
 import {
   SortableContext,
   useSortable,
 } from "@dnd-kit/sortable";
-import { CSS } from "@dnd-kit/utilities";
+import {CSS} from "@dnd-kit/utilities";
 import {useAppContextProvider} from "@/providers/AppContextProvider";
+import {DragAndDropType} from "@/types/dragAndDropType";
 
 interface DragAndDropContainerProps {
   data: any;
   renderCard: (cardData: any) => React.ReactNode;
+  type: DragAndDropType;
 }
 
-export function DragAndDropContainer({data, renderCard}: DragAndDropContainerProps) {
+export function DragAndDropContainer({data, renderCard, type}: DragAndDropContainerProps) {
 
   const [cards, setCards] = useState<any[]>([]);
   const [activeCard, setActiveCard] = useState<any>(null);
@@ -32,7 +34,7 @@ export function DragAndDropContainer({data, renderCard}: DragAndDropContainerPro
   };
 
   const handleDragOver = (event: any) => {
-    const { active, over } = event;
+    const {active, over} = event;
     if (!over || active.id === over.id) return;
 
     setCards((cards) => {
@@ -61,14 +63,15 @@ export function DragAndDropContainer({data, renderCard}: DragAndDropContainerPro
         <div className="w-[862px] flex justify-start items-center rounded-[24px] gap-[24px] flex-wrap">
           <SortableContext items={cards.map((card) => card.id)}>
             {cards.map((card) => (
-              <Card key={card.id} cardData={card} isDragging={activeCard?.id === card.id} renderCard={renderCard}/>
+              <Card key={card.id} cardData={card} isDragging={activeCard?.id === card.id} renderCard={renderCard}
+                    type={type}/>
             ))}
           </SortableContext>
         </div>
 
         <DragOverlay>
           {activeCard ? (
-            <Card cardData={activeCard} isDragging={false} renderCard={renderCard} />
+            <Card cardData={activeCard} isDragging={false} renderCard={renderCard} type={type}/>
           ) : null}
         </DragOverlay>
       </DndContext>
@@ -80,17 +83,18 @@ interface CardCardProps {
   cardData: any;
   isDragging?: boolean;
   renderCard: (cardData: any) => React.ReactNode;
+  type: DragAndDropType;
 }
 
-function Card({ renderCard, cardData, isDragging }: CardCardProps) {
-  const { attributes, listeners, setNodeRef, transform, transition } = useSortable({ id: cardData.id });
+function Card({renderCard, cardData, isDragging, type}: CardCardProps) {
+  const {attributes, listeners, setNodeRef, transform, transition} = useSortable({id: cardData.id});
   const style = {
     transition,
     transform: CSS.Transform.toString(transform),
     opacity: isDragging ? 0 : 1,
   };
 
-  const { setSelectedSave } = useAppContextProvider();
+  const {setSelectedSave} = useAppContextProvider();
 
   const [dragging, setDragging] = useState(false);
 
@@ -103,9 +107,10 @@ function Card({ renderCard, cardData, isDragging }: CardCardProps) {
       style={style}
       onPointerMove={() => setDragging(true)}
       onPointerUp={() => {
-        if (!dragging) setSelectedSave(cardData); 
+        if (!dragging && type === "save") {
+          setSelectedSave(cardData);
+        }
       }}
-
     >
       {renderCard(cardData)}
     </div>

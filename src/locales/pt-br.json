@@ -28,5 +28,13 @@
     "description": "Tem certeza que deseja excluir este save? Essa ação não pode ser desfeita.",
     "delete": "Excluir",
     "cancel": "Cancelar"
+  },
+  "createPlannerModal": {
+    "title": "Crie um planner",
+    "description": "Insira as informações do planner.",
+    "namePlaceHolder": "Nome do planner",
+    "descriptionPlaceHolder": "Descrição do planner",
+    "create": "Criar",
+    "cancel": "Cancelar"
   }
 }

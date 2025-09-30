@@ -1,6 +1,10 @@
 import {useAppContextProvider} from "@/providers/AppContextProvider";
 
-export default function PlannersSideBar() {
+interface PlannersSideBarProps {
+  setShowModal: (showModal: boolean) => void;
+}
+
+export default function PlannersSideBar({ setShowModal }: PlannersSideBarProps) {
   const { planners, setSelectedPlanner } = useAppContextProvider();
 
   return(
@@ -23,6 +27,7 @@ export default function PlannersSideBar() {
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
         }}
+        onClick={() => setShowModal(true)}
       >
         <p className={"text-[1.5rem]"}>New planner</p>
         <button

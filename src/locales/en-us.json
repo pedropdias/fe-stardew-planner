@@ -28,5 +28,13 @@
     "description": "Are you sure you want to delete this save? This action cannot be undone.",
     "delete": "Delete",
     "cancel": "Cancel"
+  },
+  "createPlannerModal": {
+    "title": "Create a planner",
+    "description": "Enter the planner informations.",
+    "namePlaceHolder": "Planner name",
+    "descriptionPlaceHolder": "Planner description",
+    "create": "Create",
+    "cancel": "Cancel"
   }
 }
