@@ -36,5 +36,13 @@
     "descriptionPlaceHolder": "Descrição do planner",
     "create": "Criar",
     "cancel": "Cancelar"
+  },
+  "savesFallback": {
+    "title": "Nenhum save foi carregado?",
+    "text1": "Baixe o mod oficial do Stardew Planner",
+    "text2": "adicione seu email e seu id de usuário no arquivo de configuração",
+    "text3": "e",
+    "text4": "durma no save para aparecer aqui",
+    "buttonText": "Baixe o mod"
   }
 }

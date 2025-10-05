@@ -15,7 +15,16 @@ import Spinner from "@/components/loadingSpinner/loadingSpinner";
 import {DragAndDropType} from "@/types/dragAndDropType";
 
 export default function SavesPage() {
-  const {user, authLoading, selectedSave, setSelectedSave, t, fetchSaves, saves, loadingGetSaves} = useAppContextProvider()
+  const {
+    user,
+    authLoading,
+    selectedSave,
+    setSelectedSave,
+    t,
+    fetchSaves,
+    saves,
+    loadingGetSaves
+  } = useAppContextProvider()
   const router = useRouter();
   const [showModal, setShowModal] = useState(false);
 
@@ -57,62 +66,95 @@ export default function SavesPage() {
   }, [user]);
 
   return (
-    <>
-      {showModal && (
-        <>
-          <div className="w-[100vw] h-[100vh] fixed inset-0 bg-[#000000B3] backdrop-blur-sm z-[999]"
-               style={{backdropFilter: "blur(3px)"}}
-          />
-          <ConfirmModal
-            title={t("deleteSaveModal.title")}
-            description={t("deleteSaveModal.description")}
-            confirmText={t("deleteSaveModal.delete")}
-            cancelText={t("deleteSaveModal.cancel")}
-            loading={loadingDeleteSave}
-            onConfirm={handleDeleteSave}
-            onCancel={() => setShowModal(false)}
-          />
-        </>
-      )}
-      {loadingGetSaves && (
-        <>
-          <div
-            className="w-[100vw] h-[100vh] fixed flex justify-center items-center inset-0 bg-[rgba(0,0,0,0.25)] backdrop-blur-sm z-[999] transition-transform"
-            style={{backdropFilter: "blur(3px)"}}
-          >
-            <Spinner />
-          </div>
-        </>
-      )}
-      <div
-        className="min-h-[100vh] bg-cover bg-center flex flex-col items-center gap-[10vh] select-none"
-        style={{backgroundImage: "url('/sky-wallpaper-blur.png')"}}>
-        <Header/>
-        <div className="flex flex-col items-center justify-center gap-[32px]">
-          <div className={"flex flex-col justify-center gap-[72px] mb-[100px]"}>
-            <div className={"flex flex-col justify-start gap-[20px] text-[#FFF] font-stardewSimple font-[100]"}>
-              <h1>{t("saves.title")}</h1>
-              <h3>{t("saves.subTitle")}</h3>
+    saves.length > 0 ? (
+      <>
+        {showModal && (
+          <>
+            <div className="w-[100vw] h-[100vh] fixed inset-0 bg-[#000000B3] backdrop-blur-sm z-[999]"
+                 style={{backdropFilter: "blur(3px)"}}
+            />
+            <ConfirmModal
+              title={t("deleteSaveModal.title")}
+              description={t("deleteSaveModal.description")}
+              confirmText={t("deleteSaveModal.delete")}
+              cancelText={t("deleteSaveModal.cancel")}
+              loading={loadingDeleteSave}
+              onConfirm={handleDeleteSave}
+              onCancel={() => setShowModal(false)}
+            />
+          </>
+        )}
+        {loadingGetSaves && (
+          <>
+            <div
+              className="w-[100vw] h-[100vh] fixed flex justify-center items-center inset-0 bg-[rgba(0,0,0,0.25)] backdrop-blur-sm z-[999] transition-transform"
+              style={{backdropFilter: "blur(3px)"}}
+            >
+              <Spinner/>
             </div>
+          </>
+        )}
+        <div
+          className="min-h-[100vh] bg-cover bg-center flex flex-col items-center gap-[10vh] select-none"
+          style={{backgroundImage: "url('/sky-wallpaper-blur.png')"}}>
+          <Header/>
+          <div className="flex flex-col items-center justify-center gap-[32px]">
+            <div className={"flex flex-col justify-center gap-[72px] mb-[100px]"}>
+              <div className={"flex flex-col justify-start gap-[20px] text-[#FFF] font-stardewSimple font-[100]"}>
+                <h1>{t("saves.title")}</h1>
+                <h3>{t("saves.subTitle")}</h3>
+              </div>
 
-            <div className={"flex justify-between w-full min-h-[300px]"}>
-              <DragAndDropContainer
-                data={saves}
-                renderCard={(cardData) => <SaveCard data={cardData}/>}
-                type={"save" as DragAndDropType}
-              />
-              {selectedSave && Object.keys(selectedSave).length > 0 &&
-                  <SelectedSaveCard data={selectedSave} setShowModal={setShowModal}/>}
+              <div className={"flex justify-between w-full min-h-[300px]"}>
+                <DragAndDropContainer
+                  data={saves}
+                  renderCard={(cardData) => <SaveCard data={cardData}/>}
+                  type={"save" as DragAndDropType}
+                />
+                {selectedSave && Object.keys(selectedSave).length > 0 &&
+                    <SelectedSaveCard data={selectedSave} setShowModal={setShowModal}/>}
+              </div>
             </div>
+            <Image
+              src={"/starfruit.png"}
+              alt={"starfruit"}
+              width={110}
+              height={110}
+            />
           </div>
-          <Image
-            src={"/starfruit.png"}
-            alt={"starfruit"}
-            width={110}
-            height={110}
-          />
         </div>
+      </>
+    ) : <SavesPageFallback/>
+  )
+}
+
+export function SavesPageFallback() {
+  const { t } = useAppContextProvider();
+
+  return (
+    <div
+      className="min-h-[100vh] bg-cover bg-center flex flex-col items-center gap-[14vh] select-none text-[#FFF]"
+      style={{backgroundImage: "url('/sky-wallpaper-blur.png')"}}>
+      <Header/>
+      <h1 className={"font-stardewMain font-[100] text-[3rem]"}>{t("savesFallback.title")}</h1>
+      <div className={"flex flex-col items-center justify-center gap-[4px] font-stardewSimple text-[1.5rem]"}>
+        <p>{t("savesFallback.text1")}</p>
+        <button
+          className={"flex justify-between items-center bg-transparent px-[24px] py-[16px] my-[32px] shadow-[3px_3px_0px_0px_rgba(0,0,0,0.15)] cursor-pointer text-[1.5rem] font-stardewMain text-[2rem] shadow-[2px_2px_6px_0px_rgba(0,0,0,0.15)] transition-transform duration-50 hover:scale-103 hover:brightness-120"}
+          style={{
+            backgroundImage: "url('/default-button-extra-large.png')",
+            backgroundSize: '100% 100%',
+            backgroundPosition: 'center',
+            backgroundRepeat: 'no-repeat',
+            textShadow: "2px 2px 0px rgba(135,52,0,0.5)"
+          }}
+        >
+          {t("savesFallback.buttonText")}
+        </button>
+        <p>{t("savesFallback.text2")}</p>
+        <p>{t("savesFallback.text3")}</p>
+        <p>{t("savesFallback.text4")}</p>
       </div>
-    </>
+    </div>
   )
 }

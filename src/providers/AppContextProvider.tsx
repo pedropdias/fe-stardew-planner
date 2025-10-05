@@ -9,6 +9,8 @@ import {getSaves} from "@/api/services/SaveService";
 import {getPlanners} from "@/api/services/PlannerService";
 import {useFetch} from "@/hooks/useFetch";
 import {GetPlannersForm} from "@/api/forms/get-planners.form";
+import {SaveType} from "@/types/saveType";
+import {PlannerType} from "@/types/PlannerType";
 
 const messages = {
   "pt-BR": ptBR,
@@ -20,11 +22,11 @@ const AppContext = createContext<AppContextType | undefined>(undefined);
 export function AppProvider({ children }: { children: React.ReactNode }) {
   const [user, setUser] = useState<any | null>(null);
   const [authLoading, setAuthLoading] = useState<boolean>(true);
-  const [selectedSave, setSelectedSave] = useState({});
+  const [selectedSave, setSelectedSave] = useState<SaveType | null>(null);
   const [locale, setLocaleState] = useState<"pt-BR" | "en-US">("en-US");
-  const [saves, setSaves] = useState([]);
-  const [planners, setPlanners] = useState([]);
-  const [selectedPlanner, setSelectedPlanner] = useState(null);
+  const [saves, setSaves] = useState<SaveType[]>([]);
+  const [planners, setPlanners] = useState<PlannerType[]>([]);
+  const [selectedPlanner, setSelectedPlanner] = useState<PlannerType | null>(null);
 
   useEffect(() => {
     const stored = localStorage.getItem("locale") as "pt-BR" | "en-US" | null;
@@ -86,7 +88,7 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
     if (!user) return;
     try {
       const result = await executeGetSaves(userId);
-      setSaves(result);
+      setSaves(result ?? []);
     } catch (error) {
       console.error(error);
     }
@@ -101,7 +103,7 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
     if (!user) return;
     try {
       const result = await executeGetPlanners({userId, gameSaveId})
-      setPlanners(result);
+      setPlanners(result ?? []);
     } catch (error) {
       console.error(error);
     }

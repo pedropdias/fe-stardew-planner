@@ -1,22 +1,23 @@
 import {Dispatch, SetStateAction} from "react";
 import {GetPlannersForm} from "@/api/forms/get-planners.form";
 import {PlannerType} from "@/types/PlannerType";
+import {SaveType} from "@/types/saveType";
 
 export type AppContextType = {
   user: any | null
   authLoading: boolean
   signInWithGoogle: () => Promise<void>
   signOut: () => Promise<void>
-  selectedSave: any | null
-  setSelectedSave: Dispatch<SetStateAction<any>>
-  saves: any | null
-  setSaves: Dispatch<SetStateAction<any>>
+  selectedSave: SaveType | null
+  setSelectedSave: Dispatch<SetStateAction<SaveType | null>>
+  saves: SaveType[] | null
+  setSaves: Dispatch<SetStateAction<SaveType[]>>
   fetchSaves: (userId: string) => Promise<void>
   loadingGetSaves: boolean
   planners: PlannerType[] | null
   setPlanners: Dispatch<SetStateAction<PlannerType[]>>
   selectedPlanner: PlannerType | null
-  setSelectedPlanner: Dispatch<SetStateAction<PlannerType>>
+  setSelectedPlanner: Dispatch<SetStateAction<PlannerType | null>>
   fetchPlanners: ({userId, gameSaveId}: GetPlannersForm) => Promise<void>
   loadingGetPlanners: boolean
   locale: "pt-BR" | "en-US";

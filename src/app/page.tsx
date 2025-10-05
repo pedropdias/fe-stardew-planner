@@ -32,12 +32,10 @@ export default function Home() {
       router.replace("/login")
       return;
     } else {
-      if (!saves || saves.length === 0) {
-        return;
-      } else {
+      if (!loadingGetSaves) {
         router.replace("/saves")
-        return;
       }
+      return;
     }
   }, [authLoading, user, router, saves]);
 
