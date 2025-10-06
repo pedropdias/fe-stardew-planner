@@ -19,6 +19,8 @@
   --card-background-4: #1E1124;
   --card-background-5: #D68F54;
   --primary-red: #911007;
+  --secondary-red: #c4473f;
+  --tertiary-red: #d9372b;
 }
 
 @theme inline {

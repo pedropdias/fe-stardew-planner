@@ -37,6 +37,18 @@
     "create": "Criar",
     "cancel": "Cancelar"
   },
+  "editPlannerModal": {
+    "title": "Edite o planner",
+    "description": "Insira as informações do planner.",
+    "namePlaceHolder": "Nome do planner",
+    "descriptionPlaceHolder": "Descrição do planner",
+    "create": "Editar",
+    "cancel": "Cancelar",
+    "delete": "Deletar planner",
+    "confirmDeleteTitle": "Deletar planner?",
+    "confirmDeleteDescription": "Tem certeza que deseja excluir este planner? Essa ação não pode ser desfeita.",
+    "confirm": "Confirmar"
+  },
   "savesFallback": {
     "title": "Nenhum save foi carregado?",
     "text1": "Baixe o mod oficial do Stardew Planner",

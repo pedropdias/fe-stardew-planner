@@ -35,17 +35,19 @@ export default function SavesPage() {
   } = useFetch(deleteSave)
 
   const handleDeleteSave = async () => {
-    if (!user) return;
+    if (!user || !selectedSave) return;
     try {
       const payload = {
         userId: selectedSave.user_id,
         gameSaveId: selectedSave.game_save_id,
 
       };
+      const response = await executeDeleteSave(payload);
 
-      await executeDeleteSave(payload);
+      if (!response) throw errorDeleteSave;
+
       fetchSaves(user.id);
-      setSelectedSave({});
+      setSelectedSave(null);
       setShowModal(false);
       return;
     } catch (error) {
@@ -66,7 +68,7 @@ export default function SavesPage() {
   }, [user]);
 
   return (
-    saves.length > 0 ? (
+    (!saves || saves.length > 0) ? (
       <>
         {showModal && (
           <>
