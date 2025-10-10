@@ -31,8 +31,12 @@ export default function EditPlannerModal({
   const [showConfirmModal, setShowConfirmModal] = useState(false);
   const [deleteLoading, setDeleteLoading] = useState(false);
 
+  if (!user) {
+    throw new Error("EditPlannerModal requires a logged-in user.");
+  }
+
   const deletePlannerFormObj = {
-    userId: user?.id,
+    userId: user.id,
     gameSaveId: gameSaveId,
     plannerId: plannerData.id
   }
