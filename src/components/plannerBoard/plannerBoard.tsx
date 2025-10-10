@@ -6,6 +6,7 @@ import TaskCard from "@/components/taskCard/taskCard";
 import {DragAndDropType} from "@/types/dragAndDropType";
 import Image from "next/image";
 import ConfirmModal from "@/components/confirmModal/confirmModal";
+import {SaveType} from "@/types/saveType";
 
 interface PlannerBoardProps {
   planner: PlannerType;
@@ -13,7 +14,7 @@ interface PlannerBoardProps {
 }
 
 export default function PlannerBoard({planner, setShowEditModal}: PlannerBoardProps) {
-  const [tasks, setTasks] = useState<any>([]);
+  const [tasks, setTasks] = useState<SaveType[] | null>([]);
 
   const createTaskCard = [{
     id: 1
@@ -48,14 +49,16 @@ export default function PlannerBoard({planner, setShowEditModal}: PlannerBoardPr
             </div>
           </div>
 
-          <div className={"flex justify-between w-full"}>
-            <DragAndDropContainer
-              data={tasks.length > 0 ? tasks : createTaskCard}
-              renderCard={(cardData) => <TaskCard data={cardData}/>}
-              type={"task" as DragAndDropType}
-            />
-            {/*{selectedSave && Object.keys(selectedSave).length > 0 && <SelectedSaveCard data={selectedSave}/>}*/}
-          </div>
+          {tasks && tasks.length > 0 && (
+            <div className={"flex justify-between w-full"}>
+              <DragAndDropContainer
+                data={tasks}
+                renderCard={(cardData) => <TaskCard data={cardData}/>}
+                type={"task" as DragAndDropType}
+              />
+              {/*{selectedSave && Object.keys(selectedSave).length > 0 && <SelectedSaveCard data={selectedSave}/>}*/}
+            </div>
+          )}
         </div>
       </div>
     </>

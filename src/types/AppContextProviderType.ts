@@ -2,9 +2,10 @@ import {Dispatch, SetStateAction} from "react";
 import {GetPlannersForm} from "@/api/forms/get-planners.form";
 import {PlannerType} from "@/types/PlannerType";
 import {SaveType} from "@/types/saveType";
+import {User} from "@supabase/auth-js";
 
 export type AppContextType = {
-  user: any | null
+  user: User | null
   authLoading: boolean
   signInWithGoogle: () => Promise<void>
   signOut: () => Promise<void>

@@ -1,7 +1,8 @@
 import {formatDayWithSuffix} from "@/utils/dayFormatter";
 import {useAppContextProvider} from "@/providers/AppContextProvider";
+import {SaveType} from "@/types/saveType";
 
-export default function SaveCard({data}: { data: any }) {
+export default function SaveCard({data}: { data: SaveType }) {
   const farmName = data?.save_data?.SaveGame?.player?.farmName;
   const playerName = data?.save_data?.SaveGame?.player?.name;
   const money = Number(data?.save_data?.SaveGame?.player?.money);
@@ -10,7 +11,7 @@ export default function SaveCard({data}: { data: any }) {
     maximumFractionDigits: 0,
   });
   const year = data?.save_data?.SaveGame?.year;
-  const season = data?.save_data?.SaveGame?.currentSeason;
+  const season = data?.save_data?.SaveGame?.currentSeason as string;
   const seasonFormatted = season
     ? season.charAt(0).toUpperCase() + season.slice(1)
     : undefined;

@@ -4,8 +4,14 @@ import {formatDayWithSuffix} from "@/utils/dayFormatter";
 import {useAppContextProvider} from "@/providers/AppContextProvider";
 import {useRouter} from "next/navigation";
 import Image from "next/image";
+import {SaveType} from "@/types/saveType";
 
-export default function SelectedSaveCard({data, setShowModal}: any) {
+interface SelectedSaveCardProps {
+  data: SaveType;
+  setShowModal: (showModal: boolean) => void;
+}
+
+export default function SelectedSaveCard({data, setShowModal}: SelectedSaveCardProps) {
   // console.log("Save Data Selected Card Component:", data);
   const farmName = data?.save_data?.SaveGame?.player?.farmName;
   const playerName = data?.save_data?.SaveGame?.player?.name;
@@ -15,7 +21,7 @@ export default function SelectedSaveCard({data, setShowModal}: any) {
     maximumFractionDigits: 0,
   });
   const year = data?.save_data?.SaveGame?.year;
-  const season = data?.save_data?.SaveGame?.currentSeason;
+  const season = data?.save_data?.SaveGame?.currentSeason as string;
   const seasonFormatted = season
     ? season.charAt(0).toUpperCase() + season.slice(1)
     : undefined;
@@ -48,7 +54,7 @@ export default function SelectedSaveCard({data, setShowModal}: any) {
         <p>{t("saves.selectedCard.farmer", {farmer: playerName})}</p>
       </div>
       <div className={"flex flex-col gap-[16px]"}>
-        <p>{t("saves.selectedCard.season", {season: seasonFormatted})}</p>
+        <p>{t("saves.selectedCard.season", {season: seasonFormatted || ""})}</p>
         <p>{t("saves.selectedCard.day", {day: dayFormatted})}</p>
         <p>{t("saves.selectedCard.year", {year})}</p>
       </div>

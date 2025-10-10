@@ -11,6 +11,7 @@ import {useFetch} from "@/hooks/useFetch";
 import {GetPlannersForm} from "@/api/forms/get-planners.form";
 import {SaveType} from "@/types/saveType";
 import {PlannerType} from "@/types/PlannerType";
+import {User} from "@supabase/auth-js";
 
 const messages = {
   "pt-BR": ptBR,
@@ -20,7 +21,7 @@ const messages = {
 const AppContext = createContext<AppContextType | undefined>(undefined);
 
 export function AppProvider({ children }: { children: React.ReactNode }) {
-  const [user, setUser] = useState<any | null>(null);
+  const [user, setUser] = useState<User | null>(null);
   const [authLoading, setAuthLoading] = useState<boolean>(true);
   const [selectedSave, setSelectedSave] = useState<SaveType | null>(null);
   const [locale, setLocaleState] = useState<"pt-BR" | "en-US">("en-US");
@@ -42,11 +43,15 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
 
   const t = (key: string, vars: Record<string, string> = {}) => {
     const keys = key.split(".");
-    let value: any = messages[locale];
+    let value: string | NestedStrings | undefined = messages[locale];
+
     for (const k of keys) {
+      if (typeof value === "string") break;
       value = value?.[k];
     }
-    if (!value) return key;
+
+    if (typeof value !== "string") return key;
+
     return Object.keys(vars).reduce(
       (str, v) => str.replace(`{{${v}}}`, vars[v]),
       value
@@ -55,6 +60,7 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
 
   useEffect(() => {
     supabase.auth.getUser().then(({ data }) => {
+      console.log(data.user)
       setUser(data.user)
       setAuthLoading(false)
     })

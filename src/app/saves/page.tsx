@@ -107,15 +107,17 @@ export default function SavesPage() {
                 <h3>{t("saves.subTitle")}</h3>
               </div>
 
-              <div className={"flex justify-between w-full min-h-[300px]"}>
-                <DragAndDropContainer
-                  data={saves}
-                  renderCard={(cardData) => <SaveCard data={cardData}/>}
-                  type={"save" as DragAndDropType}
-                />
-                {selectedSave && Object.keys(selectedSave).length > 0 &&
-                    <SelectedSaveCard data={selectedSave} setShowModal={setShowModal}/>}
-              </div>
+              {saves && saves.length > 0 && (
+                <div className={"flex justify-between w-full min-h-[300px]"}>
+                  <DragAndDropContainer
+                    data={saves}
+                    renderCard={(cardData) => <SaveCard data={cardData}/>}
+                    type={"save" as DragAndDropType}
+                  />
+                  {selectedSave && Object.keys(selectedSave).length > 0 &&
+                      <SelectedSaveCard data={selectedSave} setShowModal={setShowModal}/>}
+                </div>
+              )}
             </div>
             <Image
               src={"/starfruit.png"}
