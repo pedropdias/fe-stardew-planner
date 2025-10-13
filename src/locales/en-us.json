@@ -49,6 +49,36 @@
     "confirmDeleteDescription": "Are you sure you want to delete this planner? This action cannot be undone.",
     "confirm": "Confirm"
   },
+  "taskCard": {
+    "remainingDays": "Remaining days:"
+  },
+  "selectedTaskCard": {
+    "remainingDays": "Remaining days:",
+    "saveButton": "Save"
+  },
+  "createTaskModal": {
+    "title": "Create task",
+    "description": "Enter the task informations.",
+    "namePlaceHolder": "Task name",
+    "descriptionPlaceHolder": "Task description",
+    "daysPlaceHolder": "Task days",
+    "create": "Create",
+    "cancel": "Cancel"
+  },
+  "deleteTaskModal": {
+    "title": "Delete task?",
+    "description": "Are you sure you want to delete this task? This action cannot be undone.",
+    "delete": "Delete",
+    "cancel": "Cancel"
+  },
+  "saveInfoHeader": {
+    "quests": "Quests",
+    "bundles": "Bundles",
+    "social": "Social"
+  },
+  "plannersSideBar": {
+    "title": "My planners"
+  },
   "savesFallback": {
     "title": "No saves loaded?",
     "text1": "Download the Stardew Planner Official Mod",

@@ -49,6 +49,36 @@
     "confirmDeleteDescription": "Tem certeza que deseja excluir este planner? Essa ação não pode ser desfeita.",
     "confirm": "Confirmar"
   },
+  "taskCard": {
+    "remainingDays": "Dias restantes:"
+  },
+  "selectedTaskCard": {
+    "remainingDays": "Dias restantes:",
+    "saveButton": "Salvar"
+  },
+  "createTaskModal": {
+    "title": "Crie uma task",
+    "description": "Insira as informações da task",
+    "namePlaceHolder": "Nome da task",
+    "descriptionPlaceHolder": "Descrição da task",
+    "daysPlaceHolder": "Dias da task",
+    "create": "Criar",
+    "cancel": "Cancelar"
+  },
+  "deleteTaskModal": {
+    "title": "Excluir task?",
+    "description": "Tem certeza que deseja excluir esta task? Essa ação não pode ser desfeita.",
+    "delete": "Excluir",
+    "cancel": "Cancelar"
+  },
+  "saveInfoHeader": {
+    "quests": "Missoes",
+    "bundles": "Bundles",
+    "social": "Social"
+  },
+  "plannersSideBar": {
+    "title": "Meus planners"
+  },
   "savesFallback": {
     "title": "Nenhum save foi carregado?",
     "text1": "Baixe o mod oficial do Stardew Planner",

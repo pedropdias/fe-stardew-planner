@@ -1,5 +1,7 @@
 'use client'
 
+import Spinner from "@/components/loadingSpinner/loadingSpinner";
+
 interface ConfirmModalProps {
   title: string
   description: string
@@ -8,6 +10,7 @@ interface ConfirmModalProps {
   loading?: boolean
   onConfirm: () => void
   onCancel: () => void
+  onLoading?: () => void
 }
 
 export default function ConfirmModal({
@@ -39,7 +42,7 @@ export default function ConfirmModal({
             className="cursor-pointer p-[10px] bg-[#FF0000] border-2 border-[var(--card-background-4)] rounded-[4px] font-stardewSimple hover:scale-105 transition-transform flex items-center justify-center gap-[8px] disabled:opacity-50 text-[#FFFFFF]"
           >
             {loading && (
-              <span className="w-[10px] h-[10px] border-2 border-[#FFF] border-t-transparent rounded-full animate-spin"></span>
+              <Spinner size={16}/>
             )}
             {confirmText}
           </button>

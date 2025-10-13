@@ -1,8 +1,9 @@
 import {Dispatch, SetStateAction} from "react";
 import {GetPlannersForm} from "@/api/forms/get-planners.form";
 import {PlannerType} from "@/types/PlannerType";
-import {SaveType} from "@/types/saveType";
+import {SaveType, TaskType} from "@/types/saveType";
 import {User} from "@supabase/auth-js";
+import {GetTasksForm} from "@/api/forms/get-tasks.form";
 
 export type AppContextType = {
   user: User | null
@@ -21,6 +22,12 @@ export type AppContextType = {
   setSelectedPlanner: Dispatch<SetStateAction<PlannerType | null>>
   fetchPlanners: ({userId, gameSaveId}: GetPlannersForm) => Promise<void>
   loadingGetPlanners: boolean
+  fetchTasks: ({userId, gameSaveId, plannerId}: GetTasksForm) => Promise<void>
+  loadingGetTasks: boolean
+  tasks: TaskType[] | null
+  setTasks: Dispatch<SetStateAction<TaskType[]>>
+  selectedTask: TaskType | null
+  setSelectedTask: Dispatch<SetStateAction<TaskType | null>>
   locale: "pt-BR" | "en-US";
   setLocale: (loc: "pt-BR" | "en-US") => void;
   t: (key: string, vars?: Record<string, string>) => string;

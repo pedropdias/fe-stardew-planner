@@ -5,11 +5,11 @@ interface PlannersSideBarProps {
 }
 
 export default function PlannersSideBar({ setShowModal }: PlannersSideBarProps) {
-  const { planners, setSelectedPlanner } = useAppContextProvider();
+  const { planners, setSelectedPlanner, t } = useAppContextProvider();
 
   return(
     <div
-      className={"flex flex-col min-w-[291px] h-[900px] p-[26px_28px_26px_20px] bg-transparent font-stardewSimple"}
+      className={"flex flex-col min-w-[291px] max-w-[291px] min-h-[900px] p-[26px_28px_26px_20px] bg-transparent font-stardewSimple"}
       style={{
         backgroundImage: "url('/default-planner-sidebar-bg.png')",
         backgroundSize: '100% 100%',
@@ -18,7 +18,7 @@ export default function PlannersSideBar({ setShowModal }: PlannersSideBarProps) 
         textShadow: "2px 2px 0px rgba(135,52,0,0.5)"
       }}
     >
-      <p className={"text-[2rem]"}>My planners</p>
+      <p className={"text-[2rem]"}>{t("plannersSideBar.title")}</p>
       <div
         className={"flex justify-between items-center bg-transparent mt-[24px] mb-[8px] px-[20px] py-[12px] shadow-[3px_3px_0px_0px_rgba(0,0,0,0.15)] cursor-pointer shadow-[2px_2px_6px_0px_rgba(0,0,0,0.15)] transition-transform duration-50 hover:scale-103 hover:brightness-120"}
         style={{
@@ -56,7 +56,7 @@ export default function PlannersSideBar({ setShowModal }: PlannersSideBarProps) 
           }}
           onClick={() => setSelectedPlanner(planner)}
         >
-          <p className={"text-[1.5rem] mt-[6px]"}>Planner {planner.name}</p>
+          <p className={"text-[1.5rem] mt-[6px] truncate max-w-[200px] overflow-hidden text-ellipsis whitespace-nowrap"}>{planner.name}</p>
         </div>
       ))}
     </div>

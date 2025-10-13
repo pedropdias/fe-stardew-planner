@@ -9,9 +9,11 @@ import {getSaves} from "@/api/services/SaveService";
 import {getPlanners} from "@/api/services/PlannerService";
 import {useFetch} from "@/hooks/useFetch";
 import {GetPlannersForm} from "@/api/forms/get-planners.form";
-import {SaveType} from "@/types/saveType";
+import {SaveType, TaskType} from "@/types/saveType";
 import {PlannerType} from "@/types/PlannerType";
 import {User} from "@supabase/auth-js";
+import {getTasks} from "@/api/services/TaskService";
+import {GetTasksForm} from "@/api/forms/get-tasks.form";
 
 const messages = {
   "pt-BR": ptBR,
@@ -28,6 +30,8 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
   const [saves, setSaves] = useState<SaveType[]>([]);
   const [planners, setPlanners] = useState<PlannerType[]>([]);
   const [selectedPlanner, setSelectedPlanner] = useState<PlannerType | null>(null);
+  const [tasks, setTasks] = useState<TaskType[]>([]);
+  const [selectedTask, setSelectedTask] = useState<TaskType | null>(null);
 
   useEffect(() => {
     const stored = localStorage.getItem("locale") as "pt-BR" | "en-US" | null;
@@ -115,6 +119,21 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
     }
   }
 
+  const {
+    execute: executeGetTasks,
+    loading: loadingGetTasks,
+  } = useFetch(getTasks);
+
+  const fetchTasks = async ({userId, gameSaveId, plannerId}: GetTasksForm) => {
+    if (!user) return;
+    try {
+      const result = await executeGetTasks({userId, gameSaveId, plannerId})
+      setTasks(result ?? []);
+    } catch (error) {
+      console.error(error);
+    }
+  }
+
   return (
     <AppContext.Provider
       value={{
@@ -134,6 +153,12 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
         setSelectedPlanner,
         fetchPlanners,
         loadingGetPlanners,
+        fetchTasks,
+        loadingGetTasks,
+        tasks,
+        setTasks,
+        selectedTask,
+        setSelectedTask,
         locale,
         setLocale,
         t,

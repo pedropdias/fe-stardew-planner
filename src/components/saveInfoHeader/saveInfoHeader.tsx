@@ -1,5 +1,6 @@
 import {SaveType} from "@/types/saveType";
 import StardewDayCycle from "@/components/stardewDayCycle/stardewDayCycle";
+import {useAppContextProvider} from "@/providers/AppContextProvider";
 
 interface SaveInfoHeaderProps {
   save: SaveType;
@@ -22,6 +23,8 @@ export default function SaveInfoHeader({save}: SaveInfoHeaderProps) {
 }
 
 export function SaveInfoHeaderButtons({save}: SaveInfoHeaderProps) {
+  const { t } = useAppContextProvider();
+
   return (
     <div className={"flex w-[800px] items-center justify-between"}>
       <div
@@ -33,7 +36,7 @@ export function SaveInfoHeaderButtons({save}: SaveInfoHeaderProps) {
           backgroundRepeat: 'no-repeat',
         }}>
         <p className={"absolute top-[16px] left-[50%] translate-x-[-50%] font-stardewMain text-[var(--secondary-red)] text-[3.2rem]"}>
-          Quests
+          {t("saveInfoHeader.quests")}
         </p>
       </div>
       <div
@@ -45,7 +48,7 @@ export function SaveInfoHeaderButtons({save}: SaveInfoHeaderProps) {
           backgroundRepeat: 'no-repeat',
         }}>
         <p className={"absolute top-[20px] left-[50%] translate-x-[-50%] font-stardewMain text-[var(--secondary-red)] text-[3.2rem]"}>
-          Bundles
+          {t("saveInfoHeader.bundles")}
         </p>
       </div>
       <div
@@ -57,7 +60,7 @@ export function SaveInfoHeaderButtons({save}: SaveInfoHeaderProps) {
           backgroundRepeat: 'no-repeat',
         }}>
         <p className={"absolute top-[20px] left-[50%] translate-x-[-50%] font-stardewMain text-[var(--secondary-red)] text-[3.2rem]"}>
-          Social
+          {t("saveInfoHeader.social")}
         </p>
       </div>
     </div>

@@ -1,10 +1,10 @@
 import {closestCorners, DndContext, DragOverEvent, DragOverlay, DragStartEvent} from "@dnd-kit/core";
-import { useEffect, useState } from "react";
-import { SortableContext, useSortable } from "@dnd-kit/sortable";
-import { CSS } from "@dnd-kit/utilities";
-import { useAppContextProvider } from "@/providers/AppContextProvider";
-import { DragAndDropType } from "@/types/dragAndDropType";
-import {SaveType} from "@/types/saveType";
+import {useEffect, useState} from "react";
+import {SortableContext, useSortable} from "@dnd-kit/sortable";
+import {CSS} from "@dnd-kit/utilities";
+import {useAppContextProvider} from "@/providers/AppContextProvider";
+import {DragAndDropType} from "@/types/dragAndDropType";
+import {SaveType, TaskType} from "@/types/saveType";
 
 interface DragAndDropContainerProps<T> {
   data: T[];
@@ -33,7 +33,7 @@ export function DragAndDropContainer<T extends { id: number | string }>({
   };
 
   const handleDragOver = (event: DragOverEvent) => {
-    const { active, over } = event;
+    const {active, over} = event;
     if (!over || active.id === over.id) return;
 
     setCards((cards) => {
@@ -102,7 +102,7 @@ function Card<T extends { id: number | string }>({
                                                    isDragging,
                                                    type,
                                                  }: CardProps<T>) {
-  const { attributes, listeners, setNodeRef, transform, transition } = useSortable({
+  const {attributes, listeners, setNodeRef, transform, transition} = useSortable({
     id: cardData.id,
   });
 
@@ -112,7 +112,7 @@ function Card<T extends { id: number | string }>({
     opacity: isDragging ? 0 : 1,
   };
 
-  const { setSelectedSave } = useAppContextProvider();
+  const {setSelectedSave, setSelectedTask, selectedSave, selectedTask} = useAppContextProvider();
   const [dragging, setDragging] = useState(false);
 
   return (
@@ -125,7 +125,15 @@ function Card<T extends { id: number | string }>({
       onPointerMove={() => setDragging(true)}
       onPointerUp={() => {
         if (!dragging && type === "save" && isSaveType(cardData)) {
-          setSelectedSave(cardData);
+          selectedSave && cardData.id === selectedSave.id ? setSelectedSave(null) : setSelectedSave(cardData);
+        }
+        if (!dragging && type === "task" && isTaskType(cardData)) {
+          if(cardData.isDefault && cardData.setShowCreateTaskModal) {
+            setSelectedTask(null);
+            cardData.setShowCreateTaskModal(true);
+            return;
+          }
+          (selectedTask && cardData.id === selectedTask.id) || cardData.isDefault ? setSelectedTask(null) : setSelectedTask(cardData);
         }
       }}
     >
@@ -141,5 +149,17 @@ function isSaveType(obj: unknown): obj is SaveType {
     "save_data" in obj &&
     "game_save_id" in obj &&
     "created_at" in obj
+  );
+}
+
+function isTaskType(obj: unknown): obj is TaskType {
+  return (
+    typeof obj === "object" &&
+    obj !== null &&
+    "id" in obj &&
+    "plannerId" in obj &&
+    "name" in obj &&
+    "description" in obj &&
+    "days" in obj
   );
 }

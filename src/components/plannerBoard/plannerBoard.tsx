@@ -1,64 +1,90 @@
+"use client"
+
 import {PlannerType} from "@/types/PlannerType";
 import {useAppContextProvider} from "@/providers/AppContextProvider";
-import {useState} from "react";
+import {useEffect} from "react";
 import {DragAndDropContainer} from "@/components/dragAndDropContainer/dragAndDropContainer";
 import TaskCard from "@/components/taskCard/taskCard";
 import {DragAndDropType} from "@/types/dragAndDropType";
 import Image from "next/image";
-import ConfirmModal from "@/components/confirmModal/confirmModal";
-import {SaveType} from "@/types/saveType";
+import {useParams} from "next/navigation";
+import SelectedTaskCard from "@/components/selectedTaskCard/selectedTaskCard";
 
 interface PlannerBoardProps {
   planner: PlannerType;
   setShowEditModal: (showEditModal: boolean) => void;
+  setShowCreateTaskModal: (showCreateTaskModal: boolean) => void;
+  setShowDeleteTaskModal: (showDeleteTaskModal: boolean) => void;
 }
 
-export default function PlannerBoard({planner, setShowEditModal}: PlannerBoardProps) {
-  const [tasks, setTasks] = useState<SaveType[] | null>([]);
+export default function PlannerBoard({
+                                       planner,
+                                       setShowEditModal,
+                                       setShowCreateTaskModal,
+                                       setShowDeleteTaskModal
+                                     }: PlannerBoardProps) {
+  const {user, tasks, selectedTask, selectedPlanner, setSelectedTask, fetchTasks, fetchPlanners, fetchSaves} = useAppContextProvider();
+  const params = useParams();
+  const rawGameSaveIdParam = params.save;
+  const gameSaveId = Array.isArray(rawGameSaveIdParam) ? rawGameSaveIdParam[0] : rawGameSaveIdParam;
 
-  const createTaskCard = [{
-    id: 1
+  const defaultTask = [{
+    id: 1,
+    plannerId: planner.id,
+    name: "Create your first task",
+    description: "",
+    days: 0,
+    isDefault: true,
+    setShowCreateTaskModal: setShowCreateTaskModal,
   }]
+
+  useEffect(() => {
+    if (!user || !gameSaveId) return;
+    fetchSaves(user.id);
+    fetchPlanners({userId: user.id, gameSaveId});
+    fetchTasks({userId: user.id, gameSaveId, plannerId: planner.id.toString()})
+  }, [user, planner.id]);
+
+  useEffect(() => {
+    setSelectedTask(null)
+  }, [selectedPlanner]);
 
   return (
     <>
-      <div className="flex flex-col items-center justify-start gap-[32px] h-full">
-        <div className={"flex flex-col min-h-[400px] justify-start gap-[72px]"}>
-          <div className={"flex justify-between items-center gap-[48px] text-[#FFF] font-stardewSimple font-[100]"}>
-            <div className={"flex flex-col justify-start gap-[20px]"}>
-              <h1>{planner.name}</h1>
-              <h3>{planner.description}</h3>
-            </div>
-            <div className={"flex flex-row-reverse gap-[20px]"}>
-              <Image
-                src={"/edit-button.png"}
-                alt={"edit-button"}
-                width={60}
-                height={60}
-                className={"transition-transform duration-50 hover:scale-103 hover:brightness-125 cursor-pointer"}
-                onClick={() => setShowEditModal(true)}
-              />
-              <Image
-                src={"/add-button.png"}
-                alt={"add-button"}
-                width={60}
-                height={60}
-                className={"transition-transform duration-50 hover:scale-103 hover:brightness-125 cursor-pointer"}
-                // onClick={() => }
-              />
-            </div>
+      <div className={"flex flex-col min-h-[400px] w-full justify-start gap-[72px]"}>
+        <div className={"flex justify-between items-center gap-[48px] text-[#FFF] font-stardewSimple font-[100]"}>
+          <div className={"flex flex-col justify-start gap-[20px]"}>
+            <h1 className={"whitespace-normal break-words max-w-[800px]"}>{planner.name}</h1>
+            <h3>{planner.description}</h3>
           </div>
+          <div className={"flex flex-row-reverse gap-[20px]"}>
+            <Image
+              src={"/edit-button.png"}
+              alt={"edit-button"}
+              width={60}
+              height={60}
+              className={"transition-transform duration-50 hover:scale-103 hover:brightness-125 cursor-pointer"}
+              onClick={() => setShowEditModal(true)}
+            />
+            <Image
+              src={"/add-button.png"}
+              alt={"add-button"}
+              width={60}
+              height={60}
+              className={"transition-transform duration-50 hover:scale-103 hover:brightness-125 cursor-pointer"}
+              onClick={() => setShowCreateTaskModal(true)}
+            />
+          </div>
+        </div>
 
-          {tasks && tasks.length > 0 && (
-            <div className={"flex justify-between w-full"}>
-              <DragAndDropContainer
-                data={tasks}
-                renderCard={(cardData) => <TaskCard data={cardData}/>}
-                type={"task" as DragAndDropType}
-              />
-              {/*{selectedSave && Object.keys(selectedSave).length > 0 && <SelectedSaveCard data={selectedSave}/>}*/}
-            </div>
-          )}
+        <div className={"flex justify-between w-full"}>
+          <DragAndDropContainer
+            data={(tasks && tasks.length > 0) ? tasks : defaultTask}
+            renderCard={(cardData) => <TaskCard data={cardData}/>}
+            type={"task" as DragAndDropType}
+          />
+          {selectedTask && Object.keys(selectedTask).length > 0 &&
+              <SelectedTaskCard data={selectedTask} setShowDeleteTaskModal={setShowDeleteTaskModal}/>}
         </div>
       </div>
     </>

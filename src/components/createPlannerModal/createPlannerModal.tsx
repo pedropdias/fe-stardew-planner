@@ -2,7 +2,7 @@
 
 import { PlannerDataType } from "@/api/forms/create-planner.form";
 import { PlannerType } from "@/types/PlannerType";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { useAppContextProvider } from "@/providers/AppContextProvider";
 
 interface CreatePlannerModalProps {
@@ -36,15 +36,11 @@ export default function CreatePlannerModal({
     event.preventDefault();
 
     if (!plannerData.name.trim() || !plannerData.description.trim()) {
-      return; // impede envio se os campos estiverem vazios
+      return;
     }
 
     await onConfirm(plannerData);
   };
-
-  useEffect(() => {
-    console.log("plannerData:", plannerData);
-  }, [plannerData]);
 
   const isDisabled =
     loading || !plannerData.name.trim() || !plannerData.description.trim();

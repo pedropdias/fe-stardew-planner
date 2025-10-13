@@ -20,6 +20,8 @@ export type TaskType = {
   name: string;
   description: string;
   days: number;
+  isDefault?: boolean;
+  setShowCreateTaskModal?: (showCreateTaskModal: boolean) => void;
 }
 
 export interface SaveDataType {
