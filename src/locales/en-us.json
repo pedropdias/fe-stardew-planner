@@ -82,9 +82,9 @@
   "savesFallback": {
     "title": "No saves loaded?",
     "text1": "Download the Stardew Planner Official Mod",
-    "text2": "add your email and user id to the config file",
+    "text2": "unzip the mod and add it on your Mods folder",
     "text3": "and",
-    "text4": "sleep in a save to load it here",
+    "text4": "play a save to load it here",
     "buttonText": "Download the mod"
   }
 }

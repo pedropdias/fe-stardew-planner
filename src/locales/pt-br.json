@@ -82,9 +82,9 @@
   "savesFallback": {
     "title": "Nenhum save foi carregado?",
     "text1": "Baixe o mod oficial do Stardew Planner",
-    "text2": "adicione seu email e seu id de usuário no arquivo de configuração",
+    "text2": "descomprima o zip do mod e adicione na sua pasta Mods nos arquivos do jogo",
     "text3": "e",
-    "text4": "durma no save para aparecer aqui",
+    "text4": "jogue em um save para aparecer aqui",
     "buttonText": "Baixe o mod"
   }
 }
