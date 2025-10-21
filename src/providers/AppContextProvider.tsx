@@ -32,6 +32,8 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
   const [selectedPlanner, setSelectedPlanner] = useState<PlannerType | null>(null);
   const [tasks, setTasks] = useState<TaskType[]>([]);
   const [selectedTask, setSelectedTask] = useState<TaskType | null>(null);
+  const [isMobile, setIsMobile] = useState<boolean>(false);
+  const [isTouch, setIsTouch] = useState(false);
 
   useEffect(() => {
     const stored = localStorage.getItem("locale") as "pt-BR" | "en-US" | null;
@@ -88,6 +90,24 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
   const signOut = async () => {
     await supabase.auth.signOut()
   }
+
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+
+    const checkMobile = () => setIsMobile(window.innerWidth <= 768);
+
+    const checkTouch = () => {
+      setIsTouch('ontouchstart' in window || navigator.maxTouchPoints > 0);
+    };
+
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+
+    checkTouch();
+    window.addEventListener("resize", checkTouch);
+
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
 
   const {
     execute: executeGetSaves,
@@ -162,6 +182,10 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
         locale,
         setLocale,
         t,
+        isMobile,
+        setIsMobile,
+        isTouch,
+        setIsTouch,
       }}
     >
       {children}

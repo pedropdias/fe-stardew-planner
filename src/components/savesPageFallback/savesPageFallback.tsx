@@ -22,8 +22,8 @@ export default function SavesPageFallback() {
       className="min-h-[100vh] bg-cover bg-center flex flex-col items-center gap-[14vh] select-none text-[#FFF]"
       style={{backgroundImage: "url('/sky-wallpaper-blur.png')"}}>
       <Header/>
-      <h1 className={"font-stardewMain font-[100] text-[3rem]"}>{t("savesFallback.title")}</h1>
-      <div className={"flex flex-col items-center justify-center gap-[4px] font-stardewSimple text-[1.5rem]"}>
+      <h1 className={"font-stardewMain font-[100] text-[2.2rem] sm:text-[2.5rem] md:text-[3rem] text-center px-[48px]"}>{t("savesFallback.title")}</h1>
+      <div className={"flex flex-col items-center justify-center gap-[4px] font-stardewSimple text-[1.2rem] sm:text-[1.5rem] px-[48px] text-center"}>
         <p>{t("savesFallback.text1")}</p>
         <ConfigFileDownloadButton userId={user.id} email={user.email!} />
         <p>{t("savesFallback.text2")}</p>

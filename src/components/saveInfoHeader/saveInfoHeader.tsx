@@ -28,7 +28,7 @@ export function SaveInfoHeaderButtons({save}: SaveInfoHeaderProps) {
   return (
     <div className={"flex w-[800px] items-center justify-between"}>
       <div
-        className={"bg-transparent w-[222px] h-[174px] relative cursor-pointer shadow-[2px_2px_6px_0px_rgba(0,0,0,0.15)] transition-transform duration-50 hover:scale-102 hover:brightness-115"}
+        className={"bg-transparent w-[222px] h-[174px] relative cursor-pointer shadow-[2px_2px_6px_0px_rgba(0,0,0,0.15)] transition-transform duration-50 hover:scale-[1.02] hover:brightness-110"}
         style={{
           backgroundImage: "url('/quests-button-no-text.png')",
           backgroundSize: '100% 100%',
@@ -40,7 +40,7 @@ export function SaveInfoHeaderButtons({save}: SaveInfoHeaderProps) {
         </p>
       </div>
       <div
-        className={"bg-transparent w-[222px] h-[174px] relative cursor-pointer shadow-[2px_2px_6px_0px_rgba(0,0,0,0.15)] transition-transform duration-50 hover:scale-102 hover:brightness-115"}
+        className={"bg-transparent w-[222px] h-[174px] relative cursor-pointer shadow-[2px_2px_6px_0px_rgba(0,0,0,0.15)] transition-transform duration-50 hover:scale-[1.02] hover:brightness-110"}
         style={{
           backgroundImage: "url('/bundles-button-no-text.png')",
           backgroundSize: '100% 100%',
@@ -52,7 +52,7 @@ export function SaveInfoHeaderButtons({save}: SaveInfoHeaderProps) {
         </p>
       </div>
       <div
-        className={"bg-transparent w-[222px] h-[174px] relative cursor-pointer shadow-[2px_2px_6px_0px_rgba(0,0,0,0.15)] transition-transform duration-50 hover:scale-102 hover:brightness-115"}
+        className={"bg-transparent w-[222px] h-[174px] relative cursor-pointer shadow-[2px_2px_6px_0px_rgba(0,0,0,0.15)] transition-transform duration-50 hover:scale-[1.02] hover:brightness-110"}
         style={{
           backgroundImage: "url('/villagers-button-no-text.png')",
           backgroundSize: '100% 100%',

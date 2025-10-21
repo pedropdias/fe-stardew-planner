@@ -24,7 +24,7 @@ export default function SaveCard({data}: { data: SaveType }) {
 
   return (
     <div
-      className={"flex flex-col justify-between w-[260px] max-h-[160px] bg-transparent px-[16px] py-[20px] gap-[26px] shadow-[2px_2px_6px_0px_rgba(0,0,0,0.15)] transition-transform duration-200 hover:scale-103 hover:brightness-120"}
+      className={"flex flex-col justify-between min-w-[260px] min-h-[160px] max-h-[160px] bg-transparent px-[16px] pb-[20px] pt-[14px] gap-[20px] shadow-[2px_2px_6px_0px_rgba(0,0,0,0.15)] text-[#000] transition-transform duration-200 hover:scale-105 hover:brightness-110"}
       style={{
         backgroundImage: "url('/default-card-large.png')",
         backgroundSize: '100% 100%',
@@ -33,11 +33,11 @@ export default function SaveCard({data}: { data: SaveType }) {
         textShadow: "1px 1px 0px rgba(135,52,0,0.6)"
       }}
     >
-      <div className={"flex flex-col gap-[12px]"}>
-        <h2 className={"font-[100]"}>{farmName}</h2>
-        <p>{t("saves.saveCard.farmer", {playerName})}</p>
-      </div>
       <div className={"flex flex-col gap-[4px]"}>
+        <h2 className={"font-[100] text-[1.5rem]"}>{farmName}</h2>
+        <p className={"text-[1rem]"}>{t("saves.saveCard.farmer", {playerName})}</p>
+      </div>
+      <div className={"flex flex-col text-[1rem]"}>
         <p>{t("saves.saveCard.money", {money: formattedMoney})}</p>
         <p>{seasonFormatted}, {dayFormatted}, {year}</p>
       </div>

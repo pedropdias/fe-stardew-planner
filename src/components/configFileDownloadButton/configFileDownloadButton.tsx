@@ -39,7 +39,7 @@ export default function DownloadModButton({ userId, email }: DownloadModButtonPr
   return (
     <button
       onClick={handleDownload}
-      className="flex justify-between items-center bg-transparent px-[24px] py-[16px] my-[32px] shadow-[3px_3px_0px_0px_rgba(0,0,0,0.15)] cursor-pointer text-[2rem] font-stardewMain shadow-[2px_2px_6px_0px_rgba(0,0,0,0.15)] transition-transform duration-50 hover:scale-103 hover:brightness-120 no-underline text-[var(--primary-dark-text)]"
+      className="flex justify-between items-center bg-transparent px-[24px] py-[16px] my-[32px] shadow-[3px_3px_0px_0px_rgba(0,0,0,0.15)] cursor-pointer text-[2rem] font-stardewMain shadow-[2px_2px_6px_0px_rgba(0,0,0,0.15)] transition-transform duration-50 hover:scale-105 hover:brightness-110 no-underline text-[var(--primary-dark-text)]"
       style={{
         backgroundImage: "url('/default-button-extra-large.png')",
         backgroundSize: "100% 100%",

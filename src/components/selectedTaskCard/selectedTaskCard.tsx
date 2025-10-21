@@ -68,7 +68,7 @@ export default function SelectedTaskCard({data, setShowDeleteTaskModal}: Selecte
 
   return (
     <div
-      className={"flex flex-col justify-between h-[612px] w-[434px] bg-transparent p-[32px] pt-[16px] shadow-[2px_2px_6px_0px_rgba(0,0,0,0.15)] font-stardewSimple text-[1.6rem]"}
+      className={"flex flex-col justify-between h-[612px] w-[434px] bg-transparent p-[32px] pt-[10px] shadow-[2px_2px_6px_0px_rgba(0,0,0,0.15)] font-stardewSimple text-[1.6rem]"}
       style={{
         backgroundImage: "url('/default-selected-card.png')",
         backgroundSize: '100% 100%',
@@ -100,7 +100,7 @@ export default function SelectedTaskCard({data, setShowDeleteTaskModal}: Selecte
           />
         ) : (
           <h2
-            className="font-[400] max-w-[250px] whitespace-normal break-words overflow-hidden"
+            className="font-[400] text-[2.4rem] max-w-[250px] whitespace-normal break-words overflow-hidden"
             style={{
               display: "-webkit-box",
               WebkitLineClamp: 3,
@@ -112,13 +112,13 @@ export default function SelectedTaskCard({data, setShowDeleteTaskModal}: Selecte
           </h2>
         )}
         <div className={"flex justify-between items-center gap-[16px]"}>
-          <div className={"cursor-pointer transition-transform duration-50 hover:scale-103"}
+          <div className={"cursor-pointer transition-transform duration-50 hover:scale-[1.03]"}
                onClick={() => setShowDeleteTaskModal(true)}>
             <Image src="/delete-button.png" alt="delete-button" width={36} height={36}/>
           </div>
           <div className={"flex justify-between items-center mb-[12px]"} onClick={() => setSelectedTask(null)}>
             <p
-              className={"text-[4rem] text-[#2b2320] font-stardewMain cursor-pointer transition-transform duration-50 hover:scale-103"}>x</p>
+              className={"text-[4rem] text-[#2b2320] font-stardewMain cursor-pointer transition-transform duration-50 hover:scale-[1.03]"}>x</p>
           </div>
         </div>
       </div>
@@ -191,7 +191,7 @@ export default function SelectedTaskCard({data, setShowDeleteTaskModal}: Selecte
             )}
           </div>
           <button
-            className={"flex justify-between items-center bg-transparent px-[16px] py-[10px] shadow-[3px_3px_0px_0px_rgba(0,0,0,0.15)] transition-transform duration-50 hover:scale-103 hover:brightness-125 cursor-pointer text-[1.5rem] font-stardewSimple disabled:brightness-75 disabled:opacity-60 disabled:cursor-not-allowed"}
+            className={"flex justify-between items-center bg-transparent px-[16px] py-[10px] shadow-[3px_3px_0px_0px_rgba(0,0,0,0.15)] transition-transform duration-50 hover:scale-[1.03] hover:brightness-125 cursor-pointer text-[1.5rem] font-stardewSimple disabled:brightness-75 disabled:opacity-60 disabled:cursor-not-allowed"}
             style={{
               backgroundImage: "url('/default-button.png')",
               backgroundSize: '100% 100%',

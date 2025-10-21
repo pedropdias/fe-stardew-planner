@@ -301,7 +301,7 @@ export default function SavePage() {
             alt={"back-button"}
             width={134}
             height={55}
-            className={"transition-transform duration-50 hover:scale-103 hover:brightness-125 cursor-pointer"}
+            className={"transition-transform duration-50 hover:scale-105 hover:brightness-125 cursor-pointer"}
             onClick={() => router.push("/saves")}
           />
         </div>

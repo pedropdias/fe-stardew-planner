@@ -6,7 +6,7 @@ export default function TaskCard({data}: {data: TaskType}) {
   const { t } = useAppContextProvider();
 
   return (
-    <div className={"flex flex-col justify-between w-[250px] h-[160px] bg-[var(--card-background)] text-[#000] rounded-[10px] pt-[28px] pb-[20px] px-[18px] gap-[26px] shadow-[2px_2px_6px_0px_rgba(0,0,0,0.15)] transition-transform duration-200 hover:scale-103"}
+    <div className={"flex flex-col justify-between w-[250px] h-[160px] bg-[var(--card-background)] text-[#000] rounded-[10px] pt-[20px] pb-[20px] px-[18px] gap-[26px] shadow-[2px_2px_6px_0px_rgba(0,0,0,0.15)] transition-transform duration-200 hover:scale-105"}
          style={{
            backgroundImage: "url('/default-card-large.png')",
            backgroundSize: '100% 100%',
@@ -56,7 +56,7 @@ function DefaultTaskCard({data}: {data: TaskType}) {
           alt={"add-button"}
           width={60}
           height={60}
-          className={"transition-transform duration-50 hover:scale-103 hover:brightness-125 cursor-pointer"}
+          className={"transition-transform duration-50 hover:scale-105 hover:brightness-125 cursor-pointer"}
         />
       </div>
     </div>

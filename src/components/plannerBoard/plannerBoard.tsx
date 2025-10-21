@@ -63,7 +63,7 @@ export default function PlannerBoard({
               alt={"edit-button"}
               width={60}
               height={60}
-              className={"transition-transform duration-50 hover:scale-103 hover:brightness-125 cursor-pointer"}
+              className={"transition-transform duration-50 hover:scale-[1.03] hover:brightness-125 cursor-pointer"}
               onClick={() => setShowEditModal(true)}
             />
             <Image
@@ -71,7 +71,7 @@ export default function PlannerBoard({
               alt={"add-button"}
               width={60}
               height={60}
-              className={"transition-transform duration-50 hover:scale-103 hover:brightness-125 cursor-pointer"}
+              className={"transition-transform duration-50 hover:scale-105 hover:brightness-125 cursor-pointer"}
               onClick={() => setShowCreateTaskModal(true)}
             />
           </div>

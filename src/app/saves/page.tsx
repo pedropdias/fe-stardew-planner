@@ -24,7 +24,9 @@ export default function SavesPage() {
     t,
     fetchSaves,
     saves,
-    loadingGetSaves
+    loadingGetSaves,
+    isMobile,
+    isTouch,
   } = useAppContextProvider()
   const router = useRouter();
   const [showModal, setShowModal] = useState(false);
@@ -98,24 +100,24 @@ export default function SavesPage() {
           </>
         )}
         <div
-          className="min-h-[100vh] bg-cover bg-center flex flex-col items-center gap-[10vh] select-none"
+          className="min-h-[100vh] max-w-[100vw] overflow-x-hidden bg-cover bg-center flex flex-col items-center gap-[10vh] select-none"
           style={{backgroundImage: "url('/sky-wallpaper-blur.png')"}}>
           <Header/>
           <div className="flex flex-col items-center justify-center gap-[32px]">
             <div className={"flex flex-col justify-center gap-[72px] mb-[100px]"}>
-              <div className={"flex flex-col justify-start gap-[20px] text-[#FFF] font-stardewSimple font-[100]"}>
-                <h1>{t("saves.title")}</h1>
-                <h3>{t("saves.subTitle")}</h3>
+              <div className={`flex flex-col justify-start gap-[20px] text-[#FFF] font-stardewSimple font-[600] ${isMobile && "px-[32px]"}`}>
+                <h1 className={"text-[2rem]"}>{t("saves.title")}</h1>
+                <h3 className={"text-[1.2rem]"}>{t("saves.subTitle")}</h3>
               </div>
 
               {saves && saves.length > 0 && (
-                <div className={"flex justify-between w-full min-h-[300px]"}>
+                <div className={`flex ${isMobile ? "justify-center" : "justify-between"} w-full min-h-[300px] md:gap-[24px] xl:gap-[0px]`}>
                   <DragAndDropContainer
                     data={saves}
                     renderCard={(cardData) => <SaveCard data={cardData}/>}
                     type={"save" as DragAndDropType}
                   />
-                  {selectedSave && Object.keys(selectedSave).length > 0 &&
+                  {selectedSave && Object.keys(selectedSave).length > 0 && !isMobile && !isTouch &&
                       <SelectedSaveCard data={selectedSave} setShowModal={setShowModal}/>}
                 </div>
               )}
@@ -125,6 +127,7 @@ export default function SavesPage() {
               alt={"starfruit"}
               width={110}
               height={110}
+              className={"max-w-[84px] sm:max-w-none"}
             />
           </div>
         </div>

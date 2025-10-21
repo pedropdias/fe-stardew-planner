@@ -31,4 +31,8 @@ export type AppContextType = {
   locale: "pt-BR" | "en-US";
   setLocale: (loc: "pt-BR" | "en-US") => void;
   t: (key: string, vars?: Record<string, string>) => string;
+  isMobile: boolean;
+  setIsMobile: (isMobile: boolean) => void;
+  isTouch: boolean;
+  setIsTouch: (isMobile: boolean) => void;
 }

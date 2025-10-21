@@ -60,7 +60,7 @@ export function DragAndDropContainer<T extends { id: number | string }>({
         onDragOver={handleDragOver}
         onDragEnd={handleDragEnd}
       >
-        <div className="w-[862px] flex justify-start items-center rounded-[24px] gap-[24px] flex-wrap">
+        <div className="w-[260px] sm:w-[544px] md:w-[260px] lg:w-[544px] xl:w-[862px] flex justify-start items-center rounded-[24px] gap-[24px] flex-wrap">
           <SortableContext items={cards.map((card) => card.id)}>
             {cards.map((card) => (
               <Card

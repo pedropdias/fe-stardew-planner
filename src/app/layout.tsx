@@ -55,7 +55,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${outfit.variable} ${stardewSimpleFont.variable} ${stardewMainFont.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${outfit.variable} ${stardewSimpleFont.variable} ${stardewMainFont.variable} antialiased text-[#000]`}
       >
         <AppProvider>{children}</AppProvider>
       </body>

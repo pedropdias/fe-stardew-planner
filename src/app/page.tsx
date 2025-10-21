@@ -60,7 +60,7 @@ export default function Home() {
         {user && (
           <div className={"flex justify-center items-center gap-[32px] h-[100%] font-stardewSimple"}>
             <p className={"text-[#FFF] text-[1.2rem]"}>Olá, {user.user_metadata.full_name}</p>
-            <button onClick={signOut} className={"py-[24px] px-[48px] rounded-[20px] text-[1.2rem] cursor-pointer font-stardewSimple text-[#FFF] bg-[rgba(0,0,0,0.15)] shadow-[2px_2px_6px_0px_rgba(0,0,0,0.15)] transition-transform duration-200 hover:scale-103"}>Sair
+            <button onClick={signOut} className={"py-[24px] px-[48px] rounded-[20px] text-[1.2rem] cursor-pointer font-stardewSimple text-[#FFF] bg-[rgba(0,0,0,0.15)] shadow-[2px_2px_6px_0px_rgba(0,0,0,0.15)] transition-transform duration-200 hover:scale-105"}>Sair
             </button>
           </div>
         )}

@@ -29,7 +29,7 @@ export default function StardewDayCycle({save}: StardewDayCycleProps) {
       }}
     >
       <p
-        className={"absolute right-[60px] bottom-[200px] font-stardewSimple text-[2em]"}
+        className={"absolute right-[60px] bottom-[192px] font-stardewSimple text-[2em]"}
         style={{ textShadow: "2px 2px 0px rgba(0,0,0,0.45)" }}
       >
         <>
@@ -38,7 +38,7 @@ export default function StardewDayCycle({save}: StardewDayCycleProps) {
           {day}
         </>
       </p>
-      <div className={"absolute right-[28px] bottom-[104px] w-[165px] h-[32px] flex justify-center items-center"}>
+      <div className={"absolute right-[28px] bottom-[103px] w-[165px] h-[32px] flex justify-center items-center"}>
         <p
           className={" font-stardewSimple text-[1.4em]"}
           style={{ textShadow: "2px 2px 0px rgba(0,0,0,0.45)" }}
@@ -47,7 +47,7 @@ export default function StardewDayCycle({save}: StardewDayCycleProps) {
         </p>
       </div>
       <p
-        className={"absolute right-[28px] bottom-[6px] font-stardewMain tracking-[6.2px] text-[3em] font-[600] text-[var(--primary-red)]"}
+        className={"absolute right-[28px] bottom-[-6px] font-stardewMain tracking-[6.2px] text-[3em] font-[600] text-[var(--primary-red)]"}
       >
         {save.save_data?.SaveGame?.player?.money}
       </p>
