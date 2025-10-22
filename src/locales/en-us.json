@@ -85,6 +85,10 @@
     "text2": "unzip the mod and add it on your Mods folder",
     "text3": "and",
     "text4": "play a save to load it here",
-    "buttonText": "Download the mod"
+    "downloadButtonText": "Download the mod",
+    "text5": "If you want to test the features of Stardew Planner",
+    "text6": "without integrating with the in-game mod",
+    "text7": "create a Demo Save and explore the available management features",
+    "createSaveButtonText": "Create a demo save"
   }
 }

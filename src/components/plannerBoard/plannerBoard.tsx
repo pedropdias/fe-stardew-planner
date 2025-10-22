@@ -51,11 +51,11 @@ export default function PlannerBoard({
 
   return (
     <>
-      <div className={"flex flex-col min-h-[400px] w-full justify-start gap-[72px]"}>
+      <div className={"flex flex-col min-h-[400px] w-full justify-start gap-[40px]"}>
         <div className={"flex justify-between items-center gap-[48px] text-[#FFF] font-stardewSimple font-[100]"}>
-          <div className={"flex flex-col justify-start gap-[20px]"}>
-            <h1 className={"whitespace-normal break-words max-w-[800px]"}>{planner.name}</h1>
-            <h3>{planner.description}</h3>
+          <div className={"flex flex-col justify-start gap-[10px]"}>
+            <h1 className={"whitespace-normal break-words max-w-[800px] text-[2rem]"}>{planner.name}</h1>
+            <p className={"text-[1.3rem]"}>{planner.description}</p>
           </div>
           <div className={"flex flex-row-reverse gap-[20px]"}>
             <Image

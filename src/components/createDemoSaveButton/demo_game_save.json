@@ -1,0 +1,2413 @@
+{
+  "?xml": {
+    "@version": "1.0",
+    "@encoding": "utf-8"
+  },
+  "SaveGame": {
+    "year": "1",
+    "player": {
+      "flip": "false",
+      "hair": "0",
+      "name": "Demo player",
+      "skin": "0",
+      "Scale": "1",
+      "Speed": "5",
+      "items": {
+        "Item": [
+          {
+            "name": "Pickaxe",
+            "stack": "1",
+            "itemId": "Pickaxe",
+            "quality": "0",
+            "category": "-99",
+            "isRecipe": "false",
+            "@xsi:type": "Pickaxe",
+            "InstantUse": "false",
+            "instantUse": "false",
+            "isLostItem": "false",
+            "IsEfficient": "false",
+            "attachments": null,
+            "isEfficient": "false",
+            "specialItem": "false",
+            "swingTicker": "465092",
+            "upgradeLevel": "0",
+            "SpecialVariable": "0",
+            "additionalPower": {
+              "int": "0"
+            },
+            "hasBeenInInventory": "true",
+            "numAttachmentSlots": "0",
+            "IndexOfMenuItemView": "131",
+            "indexOfMenuItemView": "131",
+            "AnimationSpeedModifier": "1",
+            "InitialParentTileIndex": "105",
+            "animationSpeedModifier": "1",
+            "currentParentTileIndex": "105",
+            "initialParentTileIndex": "105"
+          },
+          {
+            "name": "Axe",
+            "stack": "1",
+            "itemId": "Axe",
+            "quality": "0",
+            "category": "-99",
+            "isRecipe": "false",
+            "@xsi:type": "Axe",
+            "InstantUse": "false",
+            "instantUse": "false",
+            "isLostItem": "false",
+            "IsEfficient": "false",
+            "attachments": null,
+            "isEfficient": "false",
+            "specialItem": "false",
+            "swingTicker": "636661",
+            "upgradeLevel": "0",
+            "SpecialVariable": "0",
+            "additionalPower": {
+              "int": "0"
+            },
+            "hasBeenInInventory": "true",
+            "numAttachmentSlots": "0",
+            "IndexOfMenuItemView": "215",
+            "indexOfMenuItemView": "215",
+            "AnimationSpeedModifier": "1",
+            "InitialParentTileIndex": "189",
+            "animationSpeedModifier": "1",
+            "currentParentTileIndex": "193",
+            "initialParentTileIndex": "189"
+          },
+          {
+            "name": "Hoe",
+            "stack": "1",
+            "itemId": "Hoe",
+            "quality": "0",
+            "category": "-99",
+            "isRecipe": "false",
+            "@xsi:type": "Hoe",
+            "InstantUse": "false",
+            "instantUse": "false",
+            "isLostItem": "false",
+            "IsEfficient": "false",
+            "attachments": null,
+            "isEfficient": "false",
+            "specialItem": "false",
+            "swingTicker": "438145",
+            "upgradeLevel": "0",
+            "SpecialVariable": "0",
+            "hasBeenInInventory": "true",
+            "numAttachmentSlots": "0",
+            "IndexOfMenuItemView": "47",
+            "indexOfMenuItemView": "47",
+            "AnimationSpeedModifier": "1",
+            "InitialParentTileIndex": "21",
+            "animationSpeedModifier": "1",
+            "currentParentTileIndex": "21",
+            "initialParentTileIndex": "21"
+          },
+          {
+            "name": "Scythe",
+            "type": "3",
+            "speed": "0",
+            "stack": "1",
+            "itemId": "47",
+            "quality": "0",
+            "category": "-99",
+            "isRecipe": "false",
+            "@xsi:type": "MeleeWeapon",
+            "knockback": "1",
+            "maxDamage": "3",
+            "minDamage": "1",
+            "InstantUse": "false",
+            "critChance": "0.02",
+            "instantUse": "false",
+            "isLostItem": "false",
+            "IsEfficient": "false",
+            "attachments": null,
+            "isEfficient": "false",
+            "isOnSpecial": "false",
+            "specialItem": "false",
+            "swingTicker": "631215",
+            "addedDefense": "0",
+            "upgradeLevel": "0",
+            "addedPrecision": "0",
+            "critMultiplier": "3",
+            "SpecialVariable": "0",
+            "addedAreaOfEffect": "0",
+            "hasBeenInInventory": "true",
+            "numAttachmentSlots": "0",
+            "IndexOfMenuItemView": "47",
+            "indexOfMenuItemView": "47",
+            "AnimationSpeedModifier": "1",
+            "InitialParentTileIndex": "47",
+            "animationSpeedModifier": "1",
+            "currentParentTileIndex": "47",
+            "initialParentTileIndex": "47"
+          },
+          {
+            "name": "Watering Can",
+            "stack": "1",
+            "itemId": "WateringCan",
+            "quality": "0",
+            "category": "-99",
+            "isRecipe": "false",
+            "@xsi:type": "WateringCan",
+            "WaterLeft": "35",
+            "InstantUse": "false",
+            "instantUse": "false",
+            "isLostItem": "false",
+            "IsEfficient": "false",
+            "attachments": null,
+            "isEfficient": "false",
+            "specialItem": "false",
+            "swingTicker": "550593",
+            "IsBottomless": "false",
+            "isBottomless": "false",
+            "upgradeLevel": "0",
+            "SpecialVariable": "0",
+            "hasBeenInInventory": "true",
+            "numAttachmentSlots": "0",
+            "IndexOfMenuItemView": "296",
+            "indexOfMenuItemView": "296",
+            "AnimationSpeedModifier": "1",
+            "InitialParentTileIndex": "273",
+            "animationSpeedModifier": "1",
+            "currentParentTileIndex": "275",
+            "initialParentTileIndex": "273"
+          },
+          {
+            "isOn": "true",
+            "name": "Parsnip Seeds",
+            "type": "Seeds",
+            "uses": "0",
+            "owner": "0",
+            "price": "10",
+            "scale": {
+              "X": "0",
+              "Y": "0"
+            },
+            "stack": "15",
+            "isLamp": "false",
+            "itemId": "472",
+            "flipped": "true",
+            "quality": "0",
+            "category": "-74",
+            "isRecipe": "false",
+            "@xsi:type": "Object",
+            "edibility": "-300",
+            "fragility": "0",
+            "questItem": "false",
+            "isLostItem": "false",
+            "setIndoors": "false",
+            "boundingBox": {
+              "X": "4160",
+              "Y": "1216",
+              "Size": {
+                "X": "64",
+                "Y": "64"
+              },
+              "Width": "64",
+              "Height": "64",
+              "Location": {
+                "X": "4160",
+                "Y": "1216"
+              }
+            },
+            "setOutdoors": "false",
+            "specialItem": "false",
+            "bigCraftable": "false",
+            "canBeGrabbed": "true",
+            "canBeSetDown": "true",
+            "tileLocation": {
+              "X": "65",
+              "Y": "19"
+            },
+            "showNextIndex": "false",
+            "SpecialVariable": "0",
+            "isSpawnedObject": "false",
+            "readyForHarvest": "false",
+            "destroyOvernight": "false",
+            "parentSheetIndex": "472",
+            "minutesUntilReady": "0",
+            "hasBeenInInventory": "true"
+          },
+          {
+            "isOn": "true",
+            "name": "Fiber",
+            "type": "Basic",
+            "uses": "0",
+            "owner": "0",
+            "price": "1",
+            "scale": {
+              "X": "0",
+              "Y": "0"
+            },
+            "stack": "32",
+            "isLamp": "false",
+            "itemId": "771",
+            "flipped": "true",
+            "quality": "0",
+            "category": "-16",
+            "isRecipe": "false",
+            "@xsi:type": "Object",
+            "edibility": "-300",
+            "fragility": "0",
+            "questItem": "false",
+            "isLostItem": "false",
+            "setIndoors": "false",
+            "boundingBox": {
+              "X": "0",
+              "Y": "0",
+              "Size": {
+                "X": "0",
+                "Y": "0"
+              },
+              "Width": "0",
+              "Height": "0",
+              "Location": {
+                "X": "0",
+                "Y": "0"
+              }
+            },
+            "setOutdoors": "false",
+            "specialItem": "false",
+            "bigCraftable": "false",
+            "canBeGrabbed": "true",
+            "canBeSetDown": "true",
+            "tileLocation": {
+              "X": "0",
+              "Y": "0"
+            },
+            "showNextIndex": "false",
+            "SpecialVariable": "0",
+            "isSpawnedObject": "false",
+            "readyForHarvest": "false",
+            "destroyOvernight": "false",
+            "parentSheetIndex": "771",
+            "minutesUntilReady": "0",
+            "hasBeenInInventory": "true"
+          },
+          {
+            "@xsi:nil": "true"
+          },
+          {
+            "isOn": "true",
+            "name": "Stone",
+            "type": "Basic",
+            "uses": "0",
+            "owner": "0",
+            "price": "2",
+            "scale": {
+              "X": "0",
+              "Y": "0"
+            },
+            "stack": "8",
+            "isLamp": "false",
+            "itemId": "390",
+            "flipped": "false",
+            "quality": "0",
+            "category": "-16",
+            "isRecipe": "false",
+            "@xsi:type": "Object",
+            "edibility": "-300",
+            "fragility": "0",
+            "questItem": "false",
+            "isLostItem": "false",
+            "setIndoors": "false",
+            "boundingBox": {
+              "X": "0",
+              "Y": "0",
+              "Size": {
+                "X": "0",
+                "Y": "0"
+              },
+              "Width": "0",
+              "Height": "0",
+              "Location": {
+                "X": "0",
+                "Y": "0"
+              }
+            },
+            "setOutdoors": "false",
+            "specialItem": "false",
+            "bigCraftable": "false",
+            "canBeGrabbed": "true",
+            "canBeSetDown": "true",
+            "tileLocation": {
+              "X": "0",
+              "Y": "0"
+            },
+            "showNextIndex": "false",
+            "SpecialVariable": "0",
+            "isSpawnedObject": "false",
+            "readyForHarvest": "false",
+            "destroyOvernight": "false",
+            "parentSheetIndex": "390",
+            "minutesUntilReady": "0",
+            "hasBeenInInventory": "true"
+          },
+          {
+            "isOn": "true",
+            "name": "Wood",
+            "type": "Basic",
+            "uses": "0",
+            "owner": "0",
+            "price": "2",
+            "scale": {
+              "X": "0",
+              "Y": "0"
+            },
+            "stack": "43",
+            "isLamp": "false",
+            "itemId": "388",
+            "flipped": "false",
+            "quality": "0",
+            "category": "-16",
+            "isRecipe": "false",
+            "@xsi:type": "Object",
+            "edibility": "-300",
+            "fragility": "0",
+            "questItem": "false",
+            "isLostItem": "false",
+            "setIndoors": "false",
+            "boundingBox": {
+              "X": "0",
+              "Y": "0",
+              "Size": {
+                "X": "0",
+                "Y": "0"
+              },
+              "Width": "0",
+              "Height": "0",
+              "Location": {
+                "X": "0",
+                "Y": "0"
+              }
+            },
+            "setOutdoors": "false",
+            "specialItem": "false",
+            "bigCraftable": "false",
+            "canBeGrabbed": "true",
+            "canBeSetDown": "true",
+            "tileLocation": {
+              "X": "0",
+              "Y": "0"
+            },
+            "showNextIndex": "false",
+            "SpecialVariable": "0",
+            "isSpawnedObject": "false",
+            "readyForHarvest": "false",
+            "destroyOvernight": "false",
+            "parentSheetIndex": "388",
+            "minutesUntilReady": "0",
+            "hasBeenInInventory": "true"
+          },
+          {
+            "isOn": "true",
+            "name": "Sap",
+            "type": "Basic",
+            "uses": "0",
+            "owner": "0",
+            "price": "2",
+            "scale": {
+              "X": "0",
+              "Y": "0"
+            },
+            "stack": "12",
+            "isLamp": "false",
+            "itemId": "92",
+            "flipped": "false",
+            "quality": "0",
+            "category": "-81",
+            "isRecipe": "false",
+            "@xsi:type": "Object",
+            "edibility": "-1",
+            "fragility": "0",
+            "questItem": "false",
+            "isLostItem": "false",
+            "setIndoors": "false",
+            "boundingBox": {
+              "X": "0",
+              "Y": "0",
+              "Size": {
+                "X": "0",
+                "Y": "0"
+              },
+              "Width": "0",
+              "Height": "0",
+              "Location": {
+                "X": "0",
+                "Y": "0"
+              }
+            },
+            "setOutdoors": "false",
+            "specialItem": "false",
+            "bigCraftable": "false",
+            "canBeGrabbed": "true",
+            "canBeSetDown": "true",
+            "tileLocation": {
+              "X": "0",
+              "Y": "0"
+            },
+            "showNextIndex": "false",
+            "SpecialVariable": "0",
+            "isSpawnedObject": "false",
+            "readyForHarvest": "false",
+            "destroyOvernight": "false",
+            "parentSheetIndex": "92",
+            "minutesUntilReady": "0",
+            "hasBeenInInventory": "true"
+          },
+          {
+            "isOn": "true",
+            "name": "Clay",
+            "type": "Basic",
+            "uses": "0",
+            "owner": "0",
+            "price": "20",
+            "scale": {
+              "X": "0",
+              "Y": "0"
+            },
+            "stack": "1",
+            "isLamp": "false",
+            "itemId": "330",
+            "flipped": "false",
+            "quality": "0",
+            "category": "-16",
+            "isRecipe": "false",
+            "@xsi:type": "Object",
+            "edibility": "-300",
+            "fragility": "0",
+            "questItem": "false",
+            "isLostItem": "false",
+            "setIndoors": "false",
+            "boundingBox": {
+              "X": "0",
+              "Y": "0",
+              "Size": {
+                "X": "0",
+                "Y": "0"
+              },
+              "Width": "0",
+              "Height": "0",
+              "Location": {
+                "X": "0",
+                "Y": "0"
+              }
+            },
+            "setOutdoors": "false",
+            "specialItem": "false",
+            "bigCraftable": "false",
+            "canBeGrabbed": "true",
+            "canBeSetDown": "true",
+            "tileLocation": {
+              "X": "0",
+              "Y": "0"
+            },
+            "showNextIndex": "false",
+            "SpecialVariable": "0",
+            "isSpawnedObject": "false",
+            "readyForHarvest": "false",
+            "destroyOvernight": "false",
+            "parentSheetIndex": "330",
+            "minutesUntilReady": "0",
+            "hasBeenInInventory": "true"
+          }
+        ]
+      },
+      "money": "0",
+      "pants": "-1",
+      "scale": {
+        "float": "1"
+      },
+      "shirt": "-1",
+      "shoes": "2",
+      "stats": {
+        "Values": {
+          "item": [
+            {
+              "key": {
+                "string": "averageBedtime"
+              },
+              "value": {
+                "unsignedInt": "605"
+              }
+            },
+            {
+              "key": {
+                "string": "daysPlayed"
+              },
+              "value": {
+                "unsignedInt": "48"
+              }
+            },
+            {
+              "key": {
+                "string": "stepsTaken"
+              },
+              "value": {
+                "unsignedInt": "219"
+              }
+            },
+            {
+              "key": {
+                "string": "rocksCrushed"
+              },
+              "value": {
+                "unsignedInt": "8"
+              }
+            },
+            {
+              "key": {
+                "string": "stoneGathered"
+              },
+              "value": {
+                "unsignedInt": "8"
+              }
+            },
+            {
+              "key": {
+                "string": "TreesChopped"
+              },
+              "value": {
+                "unsignedInt": "2"
+              }
+            },
+            {
+              "key": {
+                "string": "dirtHoed"
+              },
+              "value": {
+                "unsignedInt": "15"
+              }
+            },
+            {
+              "key": {
+                "string": "seedsSown"
+              },
+              "value": {
+                "unsignedInt": "5"
+              }
+            },
+            {
+              "key": {
+                "string": "mossHarvested"
+              },
+              "value": {
+                "unsignedInt": "8"
+              }
+            }
+          ]
+        },
+        "dirtHoed": {
+          "@xsi:nil": "true"
+        },
+        "goldFound": {
+          "@xsi:nil": "true"
+        },
+        "ironFound": {
+          "@xsi:nil": "true"
+        },
+        "seedsSown": {
+          "@xsi:nil": "true"
+        },
+        "cheeseMade": {
+          "@xsi:nil": "true"
+        },
+        "daysPlayed": {
+          "@xsi:nil": "true"
+        },
+        "fishCaught": {
+          "@xsi:nil": "true"
+        },
+        "giftsGiven": {
+          "@xsi:nil": "true"
+        },
+        "notesFound": {
+          "@xsi:nil": "true"
+        },
+        "stepsTaken": {
+          "@xsi:nil": "true"
+        },
+        "copperFound": {
+          "@xsi:nil": "true"
+        },
+        "goodFriends": {
+          "@xsi:nil": "true"
+        },
+        "itemsCooked": {
+          "@xsi:nil": "true"
+        },
+        "timesFished": {
+          "@xsi:nil": "true"
+        },
+        "cropsShipped": {
+          "@xsi:nil": "true"
+        },
+        "iridiumFound": {
+          "@xsi:nil": "true"
+        },
+        "itemsCrafted": {
+          "@xsi:nil": "true"
+        },
+        "itemsForaged": {
+          "@xsi:nil": "true"
+        },
+        "itemsShipped": {
+          "@xsi:nil": "true"
+        },
+        "rocksCrushed": {
+          "@xsi:nil": "true"
+        },
+        "slimesKilled": {
+          "@xsi:nil": "true"
+        },
+        "beveragesMade": {
+          "@xsi:nil": "true"
+        },
+        "diamondsFound": {
+          "@xsi:nil": "true"
+        },
+        "duckEggsLayed": {
+          "@xsi:nil": "true"
+        },
+        "geodesCracked": {
+          "@xsi:nil": "true"
+        },
+        "preservesMade": {
+          "@xsi:nil": "true"
+        },
+        "stoneGathered": {
+          "@xsi:nil": "true"
+        },
+        "stumpsChopped": {
+          "@xsi:nil": "true"
+        },
+        "trufflesFound": {
+          "@xsi:nil": "true"
+        },
+        "averageBedtime": {
+          "@xsi:nil": "true"
+        },
+        "goatCheeseMade": {
+          "@xsi:nil": "true"
+        },
+        "monstersKilled": {
+          "@xsi:nil": "true"
+        },
+        "cowMilkProduced": {
+          "@xsi:nil": "true"
+        },
+        "questsCompleted": {
+          "@xsi:nil": "true"
+        },
+        "weedsEliminated": {
+          "@xsi:nil": "true"
+        },
+        "caveCarrotsFound": {
+          "@xsi:nil": "true"
+        },
+        "chickenEggsLayed": {
+          "@xsi:nil": "true"
+        },
+        "goatMilkProduced": {
+          "@xsi:nil": "true"
+        },
+        "timesUnconscious": {
+          "@xsi:nil": "true"
+        },
+        "totalMoneyGifted": {
+          "@xsi:nil": "true"
+        },
+        "sheepWoolProduced": {
+          "@xsi:nil": "true"
+        },
+        "rabbitWoolProduced": {
+          "@xsi:nil": "true"
+        },
+        "mysticStonesCrushed": {
+          "@xsi:nil": "true"
+        },
+        "prismaticShardsFound": {
+          "@xsi:nil": "true"
+        },
+        "individualMoneyEarned": {
+          "@xsi:nil": "true"
+        },
+        "piecesOfTrashRecycled": {
+          "@xsi:nil": "true"
+        },
+        "otherPreciousGemsFound": {
+          "@xsi:nil": "true"
+        },
+        "specificMonstersKilled": null
+      },
+      "Gender": "Male",
+      "gender": "Male",
+      "health": "100",
+      "isMale": {
+        "@xsi:nil": "true"
+      },
+      "qiGems": "0",
+      "userID": null,
+      "mailbox": {
+        "string": [
+          "spring_2_1",
+          "landslideDone",
+          "spring_11_1",
+          "spring_12",
+          "spring_15_1",
+          "fertilizers",
+          "spring_19_1",
+          "spring_23",
+          "summer_3_1",
+          "summer_10",
+          "summer_14_1",
+          "GreenRainGus",
+          "pierreBackpack",
+          "summer_20_1"
+        ]
+      },
+      "stamina": "270",
+      "Position": {
+        "X": "576",
+        "Y": "608"
+      },
+      "farmName": "Demo Save Farm",
+      "glowRate": "0",
+      "maxItems": "12",
+      "questLog": {
+        "Quest": [
+          {
+            "id": "9",
+            "parts": {
+              "DescriptionElement": [
+                {
+                  "param": {
+                    "xmlKey": "Strings\\StringsFromCSFiles:SocializeQuest.cs.13787",
+                    "@xsi:type": "DescriptionElement"
+                  },
+                  "xmlKey": "Strings\\StringsFromCSFiles:SocializeQuest.cs.13786"
+                },
+                {
+                  "xmlKey": "Strings\\StringsFromCSFiles:SocializeQuest.cs.13791"
+                }
+              ]
+            },
+            "total": "28",
+            "destroy": "false",
+            "showNew": "true",
+            "accepted": "false",
+            "daysLeft": "0",
+            "@xsi:type": "SocializeQuest",
+            "completed": "false",
+            "objective": {
+              "param": [
+                {
+                  "#text": "2",
+                  "@xsi:type": "xsd:int"
+                },
+                {
+                  "#text": "28",
+                  "@xsi:type": "xsd:int"
+                }
+              ],
+              "xmlKey": "Strings\\StringsFromCSFiles:SocializeQuest.cs.13802"
+            },
+            "questType": "5",
+            "dailyQuest": "false",
+            "nextQuests": {
+              "int": "25"
+            },
+            "questTitle": "Introductions",
+            "whoToGreet": {
+              "string": [
+                "Abigail",
+                "Caroline",
+                "Clint",
+                "Demetrius",
+                "Willy",
+                "Elliott",
+                "Emily",
+                "Evelyn",
+                "George",
+                "Gus",
+                "Haley",
+                "Harvey",
+                "Jas",
+                "Jodi",
+                "Alex",
+                "Leah",
+                "Linus",
+                "Marnie",
+                "Maru",
+                "Pam",
+                "Penny",
+                "Pierre",
+                "Sam",
+                "Sebastian",
+                "Shane",
+                "Vincent"
+              ]
+            },
+            "_questTitle": "Introductions",
+            "moneyReward": "0",
+            "canBeCancelled": "true",
+            "dayQuestAccepted": "-1",
+            "_currentObjective": ".",
+            "_questDescription": "It would be a nice gesture to introduce yourself around town. Some people might be anxious to meet the new farmer.",
+            "rewardDescription": "-1"
+          },
+          {
+            "id": "6",
+            "number": "1",
+            "destroy": "false",
+            "showNew": "true",
+            "accepted": "false",
+            "daysLeft": "0",
+            "@xsi:type": "ItemHarvestQuest",
+            "completed": "false",
+            "itemIndex": "(O)24",
+            "questType": "9",
+            "dailyQuest": "false",
+            "nextQuests": {
+              "int": [
+                "7",
+                "8"
+              ]
+            },
+            "questTitle": "Getting Started",
+            "_questTitle": "Getting Started",
+            "moneyReward": "100",
+            "canBeCancelled": "true",
+            "dayQuestAccepted": "-1",
+            "_currentObjective": "Cultivate and harvest a parsnip.",
+            "_questDescription": "If you want to become a farmer, you have to start with the basics. Use your hoe to till the soil, then use a seed packet on the tilled soil to sow a crop. Water every day until the crop is ready for harvest.",
+            "rewardDescription": "-1"
+          }
+        ]
+      },
+      "saveTime": "7006987",
+      "IsEmoting": "true",
+      "accessory": "-1",
+      "biteChime": "-1",
+      "catPerson": {
+        "@xsi:nil": "true"
+      },
+      "clubCoins": "0",
+      "drawOnTop": "false",
+      "isEmoting": "true",
+      "isGlowing": "false",
+      "luckLevel": "0",
+      "maxHealth": "100",
+      "newLevels": null,
+      "pantsItem": {
+        "name": "Farmer Pants",
+        "Price": "50",
+        "price": "50",
+        "stack": "1",
+        "itemId": "0",
+        "dyeable": "true",
+        "quality": "0",
+        "category": "-100",
+        "isRecipe": "false",
+        "isLostItem": "false",
+        "clothesType": "PANTS",
+        "isPrismatic": "false",
+        "specialItem": "false",
+        "clothesColor": {
+          "A": "255",
+          "B": "183",
+          "G": "85",
+          "R": "46",
+          "PackedValue": "4290204974"
+        },
+        "SpecialVariable": "0",
+        "indexInTileSheet": "0",
+        "hasBeenInInventory": "true",
+        "indexInTileSheetFemale": {
+          "@xsi:nil": "true"
+        }
+      },
+      "shirtItem": {
+        "name": "Classic Overalls",
+        "Price": "50",
+        "price": "50",
+        "stack": "1",
+        "itemId": "1000",
+        "dyeable": "false",
+        "quality": "0",
+        "category": "-100",
+        "isRecipe": "false",
+        "isLostItem": "false",
+        "clothesType": "SHIRT",
+        "isPrismatic": "false",
+        "specialItem": "false",
+        "clothesColor": {
+          "A": "255",
+          "B": "255",
+          "G": "255",
+          "R": "255",
+          "PackedValue": "4294967295"
+        },
+        "SpecialVariable": "0",
+        "indexInTileSheet": "0",
+        "hasBeenInInventory": "true",
+        "indexInTileSheetFemale": {
+          "@xsi:nil": "true"
+        }
+      },
+      "HasTownKey": {
+        "@xsi:nil": "true"
+      },
+      "caveChoice": "0",
+      "eventsSeen": {
+        "int": [
+          "60367",
+          "897405"
+        ]
+      },
+      "facialHair": "-1",
+      "fishCaught": null,
+      "isCharging": "false",
+      "maxStamina": "270",
+      "pantsColor": {
+        "A": "255",
+        "B": "183",
+        "G": "85",
+        "R": "46",
+        "PackedValue": "4290204974"
+      },
+      "songsHeard": {
+        "string": [
+          "title_day",
+          "title_night",
+          "CloudCountry",
+          "spring1",
+          "spring2",
+          "spring3",
+          "summer1",
+          "summer2",
+          "summer3",
+          "summer_day_ambient"
+        ]
+      },
+      "bibberstyke": "0",
+      "combatLevel": "0",
+      "daysMarried": {
+        "@xsi:nil": "true"
+      },
+      "gameVersion": "1.6.15",
+      "giftedItems": null,
+      "hasClubCard": {
+        "@xsi:nil": "true"
+      },
+      "hasMagicInk": {
+        "@xsi:nil": "true"
+      },
+      "hasRustyKey": {
+        "@xsi:nil": "true"
+      },
+      "hasSkullKey": {
+        "@xsi:nil": "true"
+      },
+      "miningLevel": "0",
+      "newEyeColor": {
+        "A": "255",
+        "B": "52",
+        "G": "68",
+        "R": "122",
+        "PackedValue": "4281615482"
+      },
+      "professions": null,
+      "slotCanHost": "false",
+      "CurrentEmote": "24",
+      "achievements": null,
+      "basicShipped": null,
+      "farmingLevel": "0",
+      "fishingLevel": "0",
+      "homeLocation": "FarmHouse",
+      "isCustomized": "true",
+      "mailReceived": {
+        "string": [
+          "button_tut_1",
+          "button_tut_2",
+          "BackpackTip"
+        ]
+      },
+      "specialItems": null,
+      "whichPetType": "Dog",
+      "callsReceived": null,
+      "coloredBorder": "false",
+      "disconnectDay": "-1",
+      "favoriteThing": "Norget",
+      "foragingLevel": "0",
+      "mineralsFound": null,
+      "mostRecentBed": {
+        "X": "617.5949",
+        "Y": "589.9251"
+      },
+      "recipesCooked": null,
+      "tailoredItems": null,
+      "timeWentToBed": {
+        "int": "0"
+      },
+      "trashCanLevel": "0",
+      "whichPetBreed": "4",
+      "cookingRecipes": {
+        "item": {
+          "key": {
+            "string": "Fried Egg"
+          },
+          "value": {
+            "int": "0"
+          }
+        }
+      },
+      "divorceTonight": "false",
+      "friendshipData": {
+        "item": [
+          {
+            "key": {
+              "string": "Lewis"
+            },
+            "value": {
+              "Friendship": {
+                "Points": "0",
+                "Status": "Friendly",
+                "Proposer": "0",
+                "GiftsToday": "0",
+                "GiftsThisWeek": "0",
+                "TalkedToToday": "false",
+                "ProposalRejected": "false",
+                "RoommateMarriage": "false"
+              }
+            }
+          },
+          {
+            "key": {
+              "string": "Robin"
+            },
+            "value": {
+              "Friendship": {
+                "Points": "0",
+                "Status": "Friendly",
+                "Proposer": "0",
+                "GiftsToday": "0",
+                "GiftsThisWeek": "0",
+                "TalkedToToday": "false",
+                "ProposalRejected": "false",
+                "RoommateMarriage": "false"
+              }
+            }
+          }
+        ]
+      },
+      "hairstyleColor": {
+        "A": "255",
+        "B": "50",
+        "G": "90",
+        "R": "193",
+        "PackedValue": "4281490113"
+      },
+      "lastSleepPoint": {
+        "X": "10",
+        "Y": "9"
+      },
+      "FacingDirection": "1",
+      "craftingRecipes": {
+        "item": [
+          {
+            "key": {
+              "string": "Campfire"
+            },
+            "value": {
+              "int": "0"
+            }
+          },
+          {
+            "key": {
+              "string": "Cobblestone Path"
+            },
+            "value": {
+              "int": "0"
+            }
+          },
+          {
+            "key": {
+              "string": "Gravel Path"
+            },
+            "value": {
+              "int": "0"
+            }
+          },
+          {
+            "key": {
+              "string": "Wood Path"
+            },
+            "value": {
+              "int": "0"
+            }
+          },
+          {
+            "key": {
+              "string": "Text Sign"
+            },
+            "value": {
+              "int": "0"
+            }
+          },
+          {
+            "key": {
+              "string": "Stone Sign"
+            },
+            "value": {
+              "int": "0"
+            }
+          },
+          {
+            "key": {
+              "string": "Wood Sign"
+            },
+            "value": {
+              "int": "0"
+            }
+          },
+          {
+            "key": {
+              "string": "Torch"
+            },
+            "value": {
+              "int": "0"
+            }
+          },
+          {
+            "key": {
+              "string": "Chest"
+            },
+            "value": {
+              "int": "0"
+            }
+          },
+          {
+            "key": {
+              "string": "Gate"
+            },
+            "value": {
+              "int": "0"
+            }
+          },
+          {
+            "key": {
+              "string": "Wood Fence"
+            },
+            "value": {
+              "int": "0"
+            }
+          }
+        ]
+      },
+      "hasDarkTalisman": {
+        "@xsi:nil": "true"
+      },
+      "hasSpecialCharm": {
+        "@xsi:nil": "true"
+      },
+      "mailForTomorrow": null,
+      "secretNotesSeen": null,
+      "yearForSaveGame": "1",
+      "archaeologyFound": null,
+      "deepestMineLevel": "0",
+      "experiencePoints": {
+        "int": [
+          "0",
+          "0",
+          "46",
+          "8",
+          "0",
+          "0"
+        ]
+      },
+      "faceTowardFarmer": "false",
+      "forceOneTileWide": "false",
+      "locationsVisited": {
+        "string": [
+          "Farm",
+          "FarmHouse"
+        ]
+      },
+      "theaterBuildDate": "-1",
+      "totalMoneyEarned": "0",
+      "houseUpgradeLevel": "0",
+      "lastSeenMovieWeek": "-1",
+      "lastSleepLocation": "FarmHouse",
+      "seasonForSaveGame": "1",
+      "triggerActionsRun": {
+        "string": [
+          "Mail_Willy_ResendSpring21",
+          "Mail_Pierre_Fertilizers"
+        ]
+      },
+      "acceptedDailyQuest": "false",
+      "difficultyModifier": "1",
+      "disconnectPosition": {
+        "X": "0",
+        "Y": "0"
+      },
+      "faceAwayFromFarmer": "false",
+      "hasMagnifyingGlass": {
+        "@xsi:nil": "true"
+      },
+      "itemsLostLastDeath": null,
+      "millisecondsPlayed": "629936",
+      "movementDirections": null,
+      "movementMultiplier": "0.066",
+      "useSeparateWallets": "false",
+      "UniqueMultiplayerID": "-7874050920758097816",
+      "chestConsumedLevels": null,
+      "glowingTransparency": "0",
+      "lastGotPrizeFromGil": {
+        "WorldDate": {
+          "@xsi:nil": "true"
+        }
+      },
+      "sleptInTemporaryBed": {
+        "boolean": "false"
+      },
+      "activeDialogueEvents": {
+        "item": [
+          {
+            "key": {
+              "string": "GreenRainFinished_memory_oneday"
+            },
+            "value": {
+              "int": "4"
+            }
+          },
+          {
+            "key": {
+              "string": "eventSeen_897405_memory_oneday"
+            },
+            "value": {
+              "int": "0"
+            }
+          },
+          {
+            "key": {
+              "string": "gotPet_memory_oneday"
+            },
+            "value": {
+              "int": "0"
+            }
+          },
+          {
+            "key": {
+              "string": "GreenRainFinished"
+            },
+            "value": {
+              "int": "0"
+            }
+          }
+        ]
+      },
+      "canUnderstandDwarves": {
+        "@xsi:nil": "true"
+      },
+      "hasUnlockedSkullDoor": {
+        "@xsi:nil": "true"
+      },
+      "showChestColorPicker": "true",
+      "specialBigCraftables": null,
+      "dayOfMonthForSaveGame": "20",
+      "daysUntilHouseUpgrade": "-1",
+      "usingRandomizedBobber": "false",
+      "daysLeftForToolUpgrade": "0",
+      "timesReachedMineBottom": "0",
+      "changeWalletTypeTonight": "false",
+      "ignoreMovementAnimation": "false",
+      "dialogueQuestionsAnswered": null,
+      "hasWateringCanEnchantment": "false",
+      "temporaryInvincibilityTimer": "0",
+      "willDestroyObjectsUnderfoot": "true",
+      "previousActiveDialogueEvents": {
+        "item": [
+          {
+            "key": {
+              "string": "Introduction"
+            },
+            "value": {
+              "int": "48"
+            }
+          },
+          {
+            "key": {
+              "string": "firstVisit_Farm"
+            },
+            "value": {
+              "int": "47"
+            }
+          },
+          {
+            "key": {
+              "string": "firstVisit_FarmHouse"
+            },
+            "value": {
+              "int": "47"
+            }
+          },
+          {
+            "key": {
+              "string": "eventSeen_897405"
+            },
+            "value": {
+              "int": "5"
+            }
+          },
+          {
+            "key": {
+              "string": "gotPet"
+            },
+            "value": {
+              "int": "5"
+            }
+          },
+          {
+            "key": {
+              "string": "GreenRainFinished"
+            },
+            "value": {
+              "int": "1"
+            }
+          }
+        ]
+      },
+      "lastDesertFestivalFishingQuest": {
+        "WorldDate": {
+          "@xsi:nil": "true"
+        }
+      },
+      "currentTemporaryInvincibilityDuration": "1200"
+    },
+    "options": {
+      "rumble": "true",
+      "autoRun": "true",
+      "uiScale": "1",
+      "mapButton": {
+        "InputButton": {
+          "key": "M",
+          "mouseLeft": "false",
+          "mouseRight": "false"
+        }
+      },
+      "runButton": {
+        "InputButton": {
+          "key": "LeftShift",
+          "mouseLeft": "false",
+          "mouseRight": "false"
+        }
+      },
+      "zoomLevel": "1",
+      "chatButton": {
+        "InputButton": [
+          {
+            "key": "T",
+            "mouseLeft": "false",
+            "mouseRight": "false"
+          },
+          {
+            "key": "OemQuestion",
+            "mouseLeft": "false",
+            "mouseRight": "false"
+          }
+        ]
+      },
+      "fullscreen": "false",
+      "menuButton": {
+        "InputButton": [
+          {
+            "key": "E",
+            "mouseLeft": "false",
+            "mouseRight": "false"
+          },
+          {
+            "key": "Escape",
+            "mouseLeft": "false",
+            "mouseRight": "false"
+          }
+        ]
+      },
+      "emoteButton": {
+        "InputButton": {
+          "key": "Y",
+          "mouseLeft": "false",
+          "mouseRight": "false"
+        }
+      },
+      "gamepadMode": "Auto",
+      "screenFlash": "true",
+      "snappyMenus": "true",
+      "stowingMode": "GamepadOnly",
+      "toolbarSwap": {
+        "InputButton": {
+          "key": "Tab",
+          "mouseLeft": "false",
+          "mouseRight": "false"
+        }
+      },
+      "zoomButtons": "false",
+      "actionButton": {
+        "InputButton": [
+          {
+            "key": "X",
+            "mouseLeft": "false",
+            "mouseRight": "false"
+          },
+          {
+            "key": "None",
+            "mouseLeft": "false",
+            "mouseRight": "true"
+          }
+        ]
+      },
+      "cancelButton": {
+        "InputButton": {
+          "key": "V",
+          "mouseLeft": "false",
+          "mouseRight": "false"
+        }
+      },
+      "enableServer": "true",
+      "moveUpButton": {
+        "InputButton": {
+          "key": "W",
+          "mouseLeft": "false",
+          "mouseRight": "false"
+        }
+      },
+      "vsyncEnabled": "true",
+      "journalButton": {
+        "InputButton": {
+          "key": "F",
+          "mouseLeft": "false",
+          "mouseRight": "false"
+        }
+      },
+      "mouseControls": "false",
+      "serverPrivacy": "FriendsOnly",
+      "showPortraits": "true",
+      "useToolButton": {
+        "InputButton": [
+          {
+            "key": "C",
+            "mouseLeft": "false",
+            "mouseRight": "false"
+          },
+          {
+            "key": "None",
+            "mouseLeft": "true",
+            "mouseRight": "false"
+          }
+        ]
+      },
+      "dialogueTyping": "true",
+      "hardwareCursor": "false",
+      "inventorySlot1": {
+        "InputButton": {
+          "key": "D1",
+          "mouseLeft": "false",
+          "mouseRight": "false"
+        }
+      },
+      "inventorySlot2": {
+        "InputButton": {
+          "key": "D2",
+          "mouseLeft": "false",
+          "mouseRight": "false"
+        }
+      },
+      "inventorySlot3": {
+        "InputButton": {
+          "key": "D3",
+          "mouseLeft": "false",
+          "mouseRight": "false"
+        }
+      },
+      "inventorySlot4": {
+        "InputButton": {
+          "key": "D4",
+          "mouseLeft": "false",
+          "mouseRight": "false"
+        }
+      },
+      "inventorySlot5": {
+        "InputButton": {
+          "key": "D5",
+          "mouseLeft": "false",
+          "mouseRight": "false"
+        }
+      },
+      "inventorySlot6": {
+        "InputButton": {
+          "key": "D6",
+          "mouseLeft": "false",
+          "mouseRight": "false"
+        }
+      },
+      "inventorySlot7": {
+        "InputButton": {
+          "key": "D7",
+          "mouseLeft": "false",
+          "mouseRight": "false"
+        }
+      },
+      "inventorySlot8": {
+        "InputButton": {
+          "key": "D8",
+          "mouseLeft": "false",
+          "mouseRight": "false"
+        }
+      },
+      "inventorySlot9": {
+        "InputButton": {
+          "key": "D9",
+          "mouseLeft": "false",
+          "mouseRight": "false"
+        }
+      },
+      "moveDownButton": {
+        "InputButton": {
+          "key": "S",
+          "mouseLeft": "false",
+          "mouseRight": "false"
+        }
+      },
+      "moveLeftButton": {
+        "InputButton": {
+          "key": "A",
+          "mouseLeft": "false",
+          "mouseRight": "false"
+        }
+      },
+      "gamepadControls": "false",
+      "inventorySlot10": {
+        "InputButton": {
+          "key": "D0",
+          "mouseLeft": "false",
+          "mouseRight": "false"
+        }
+      },
+      "inventorySlot11": {
+        "InputButton": {
+          "key": "OemMinus",
+          "mouseLeft": "false",
+          "mouseRight": "false"
+        }
+      },
+      "inventorySlot12": {
+        "InputButton": {
+          "key": "OemPlus",
+          "mouseLeft": "false",
+          "mouseRight": "false"
+        }
+      },
+      "moveRightButton": {
+        "InputButton": {
+          "key": "D",
+          "mouseLeft": "false",
+          "mouseRight": "false"
+        }
+      },
+      "tmpKeyToReplace": {
+        "InputButton": {
+          "key": "None",
+          "mouseLeft": "false",
+          "mouseRight": "false"
+        }
+      },
+      "musicVolumeLevel": "0.08",
+      "muteAnimalSounds": "false",
+      "pinToolbarToggle": "false",
+      "snowTransparency": "1",
+      "soundVolumeLevel": "1",
+      "useAlternateFont": "false",
+      "ambientOnlyToggle": "false",
+      "dialogueFontScale": "1",
+      "ambientVolumeLevel": "0.75",
+      "playFootstepSounds": "true",
+      "showMenuBackground": "false",
+      "footstepVolumeLevel": "0.9",
+      "pauseWhenOutOfFocus": "true",
+      "ipConnectionsEnabled": "true",
+      "preferredResolutionX": "2560",
+      "preferredResolutionY": "1440",
+      "showClearBackgrounds": "false",
+      "useChineseSmoothFont": "false",
+      "invertScrollDirection": "false",
+      "showMerchantPortraits": "true",
+      "enableFarmhandCreation": "true",
+      "localCoopBaseZoomLevel": "1",
+      "localCoopDesiredUIScale": "1.5",
+      "useLegacySlingshotFiring": "false",
+      "alwaysShowToolHitLocation": "true",
+      "showMPEndOfNightReadyStatus": "false",
+      "showPlacementTileForGamepad": "true",
+      "windowedBorderlessFullscreen": "true",
+      "hideToolHitLocationWhenInMotion": "true",
+      "showAdvancedCraftingInformation": "false"
+    },
+    "builders": null,
+    "latestID": "1771413288927516162",
+    "dailyLuck": "-0.08",
+    "farmhands": null,
+    "isRaining": "false",
+    "isSnowing": "false",
+    "whichFarm": "0",
+    "@xmlns:xsd": "http://www.w3.org/2001/XMLSchema",
+    "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+    "CustomData": null,
+    "bundleData": {
+      "item": [
+        {
+          "key": {
+            "string": "Pantry/0"
+          },
+          "value": {
+            "string": "Spring Crops/O 465 20/24 1 0 188 1 0 190 1 0 192 1 0/0///Spring Crops"
+          }
+        },
+        {
+          "key": {
+            "string": "Pantry/1"
+          },
+          "value": {
+            "string": "Summer Crops/O 621 1/256 1 0 260 1 0 258 1 0 254 1 0/3///Summer Crops"
+          }
+        },
+        {
+          "key": {
+            "string": "Pantry/2"
+          },
+          "value": {
+            "string": "Fall Crops/BO 10 1/270 1 0 272 1 0 276 1 0 280 1 0/2///Fall Crops"
+          }
+        },
+        {
+          "key": {
+            "string": "Pantry/3"
+          },
+          "value": {
+            "string": "Quality Crops/BO 15 1/24 5 2 254 5 2 276 5 2 270 5 2/6/3//Quality Crops"
+          }
+        },
+        {
+          "key": {
+            "string": "Pantry/4"
+          },
+          "value": {
+            "string": "Animal/BO 16 1/186 1 0 182 1 0 174 1 0 438 1 0 440 1 0 442 1 0/4/5//Animal"
+          }
+        },
+        {
+          "key": {
+            "string": "Pantry/5"
+          },
+          "value": {
+            "string": "Artisan/BO 12 1/432 1 0 428 1 0 426 1 0 424 1 0 340 1 0 344 1 0 613 1 0 634 1 0 635 1 0 636 1 0 637 1 0 638 1 0/1/6//Artisan"
+          }
+        },
+        {
+          "key": {
+            "string": "Crafts Room/13"
+          },
+          "value": {
+            "string": "Spring Foraging/O 495 30/16 1 0 18 1 0 20 1 0 22 1 0/0///Spring Foraging"
+          }
+        },
+        {
+          "key": {
+            "string": "Crafts Room/14"
+          },
+          "value": {
+            "string": "Summer Foraging/O 496 30/396 1 0 398 1 0 402 1 0/3///Summer Foraging"
+          }
+        },
+        {
+          "key": {
+            "string": "Crafts Room/15"
+          },
+          "value": {
+            "string": "Fall Foraging/O 497 30/404 1 0 406 1 0 408 1 0 410 1 0/2///Fall Foraging"
+          }
+        },
+        {
+          "key": {
+            "string": "Crafts Room/16"
+          },
+          "value": {
+            "string": "Winter Foraging/O 498 30/412 1 0 414 1 0 416 1 0 418 1 0/6///Winter Foraging"
+          }
+        },
+        {
+          "key": {
+            "string": "Crafts Room/17"
+          },
+          "value": {
+            "string": "Construction/BO 114 1/388 99 0 388 99 0 390 99 0 709 10 0/4///Construction"
+          }
+        },
+        {
+          "key": {
+            "string": "Crafts Room/19"
+          },
+          "value": {
+            "string": "Exotic Foraging/O 235 5/88 1 0 90 1 0 78 1 0 420 1 0 422 1 0 724 1 0 725 1 0 726 1 0 257 1 0/1/5//Exotic Foraging"
+          }
+        },
+        {
+          "key": {
+            "string": "Fish Tank/6"
+          },
+          "value": {
+            "string": "River Fish/O DeluxeBait 30/145 1 0 143 1 0 706 1 0 699 1 0/6///River Fish"
+          }
+        },
+        {
+          "key": {
+            "string": "Fish Tank/7"
+          },
+          "value": {
+            "string": "Lake Fish/O 687 1/136 1 0 142 1 0 700 1 0 698 1 0/0///Lake Fish"
+          }
+        },
+        {
+          "key": {
+            "string": "Fish Tank/8"
+          },
+          "value": {
+            "string": "Ocean Fish/O 690 5/131 1 0 130 1 0 150 1 0 701 1 0/5///Ocean Fish"
+          }
+        },
+        {
+          "key": {
+            "string": "Fish Tank/9"
+          },
+          "value": {
+            "string": "Night Fishing/R 517 1/140 1 0 132 1 0 148 1 0/1///Night Fishing"
+          }
+        },
+        {
+          "key": {
+            "string": "Fish Tank/10"
+          },
+          "value": {
+            "string": "Specialty Fish/O 242 5/128 1 0 156 1 0 164 1 0 734 1 0/4///Specialty Fish"
+          }
+        },
+        {
+          "key": {
+            "string": "Fish Tank/11"
+          },
+          "value": {
+            "string": "Crab Pot/O 710 3/715 1 0 716 1 0 717 1 0 718 1 0 719 1 0 720 1 0 721 1 0 722 1 0 723 1 0 372 1 0/1/5//Crab Pot"
+          }
+        },
+        {
+          "key": {
+            "string": "Boiler Room/20"
+          },
+          "value": {
+            "string": "Blacksmith's/BO 13 1/334 1 0 335 1 0 336 1 0/2///Blacksmith's"
+          }
+        },
+        {
+          "key": {
+            "string": "Boiler Room/21"
+          },
+          "value": {
+            "string": "Geologist's/O 749 5/80 1 0 86 1 0 84 1 0 82 1 0/1///Geologist's"
+          }
+        },
+        {
+          "key": {
+            "string": "Boiler Room/22"
+          },
+          "value": {
+            "string": "Adventurer's/R 518 1/766 99 0 767 10 0 768 1 0 769 1 0/1/2//Adventurer's"
+          }
+        },
+        {
+          "key": {
+            "string": "Vault/23"
+          },
+          "value": {
+            "string": "2,500g/O 220 3/-1 2500 2500/4///2,500g"
+          }
+        },
+        {
+          "key": {
+            "string": "Vault/24"
+          },
+          "value": {
+            "string": "5,000g/O 369 30/-1 5000 5000/2///5,000g"
+          }
+        },
+        {
+          "key": {
+            "string": "Vault/25"
+          },
+          "value": {
+            "string": "10,000g/BO 9 1/-1 10000 10000/3///10,000g"
+          }
+        },
+        {
+          "key": {
+            "string": "Vault/26"
+          },
+          "value": {
+            "string": "25,000g/BO 21 1/-1 25000 25000/1///25,000g"
+          }
+        },
+        {
+          "key": {
+            "string": "Bulletin Board/31"
+          },
+          "value": {
+            "string": "Chef's/O 221 3/724 1 0 259 1 0 430 1 0 376 1 0 228 1 0 194 1 0/4///Chef's"
+          }
+        },
+        {
+          "key": {
+            "string": "Bulletin Board/32"
+          },
+          "value": {
+            "string": "Field Research/BO 20 1/422 1 0 392 1 0 702 1 0 536 1 0/5///Field Research"
+          }
+        },
+        {
+          "key": {
+            "string": "Bulletin Board/33"
+          },
+          "value": {
+            "string": "Enchanter's/O 336 5/725 1 0 348 1 0 446 1 0 637 1 0/1///Enchanter's"
+          }
+        },
+        {
+          "key": {
+            "string": "Bulletin Board/34"
+          },
+          "value": {
+            "string": "Dye/BO 25 1/420 1 0 397 1 0 421 1 0 444 1 0 62 1 0 266 1 0/6///Dye"
+          }
+        },
+        {
+          "key": {
+            "string": "Bulletin Board/35"
+          },
+          "value": {
+            "string": "Fodder/BO 104 1/262 10 0 178 10 0 613 3 0/3///Fodder"
+          }
+        },
+        {
+          "key": {
+            "string": "Abandoned Joja Mart/36"
+          },
+          "value": {
+            "string": "The Missing//348 1 1 807 1 0 74 1 0 454 5 2 795 1 2 445 1 0/1/5//The Missing"
+          }
+        }
+      ]
+    },
+    "dayOfMonth": "1",
+    "bannedUsers": null,
+    "farmPerfect": "false",
+    "gameVersion": "1.6.15",
+    "isLightning": "false",
+    "musicVolume": "0.08",
+    "samBandName": "The Alfalfas",
+    "shippingBin": null,
+    "soundVolume": "1",
+    "dishOfTheDay": {
+      "isOn": "true",
+      "name": "Baked Fish",
+      "type": "Cooking",
+      "uses": "0",
+      "owner": "0",
+      "price": "100",
+      "scale": {
+        "X": "0",
+        "Y": "0"
+      },
+      "stack": "2",
+      "isLamp": "false",
+      "itemId": "198",
+      "flipped": "true",
+      "quality": "0",
+      "category": "-7",
+      "isRecipe": "false",
+      "edibility": "30",
+      "fragility": "0",
+      "questItem": "false",
+      "isLostItem": "false",
+      "setIndoors": "false",
+      "boundingBox": {
+        "X": "0",
+        "Y": "0",
+        "Size": {
+          "X": "0",
+          "Y": "0"
+        },
+        "Width": "0",
+        "Height": "0",
+        "Location": {
+          "X": "0",
+          "Y": "0"
+        }
+      },
+      "setOutdoors": "false",
+      "specialItem": "false",
+      "bigCraftable": "false",
+      "canBeGrabbed": "true",
+      "canBeSetDown": "true",
+      "tileLocation": {
+        "X": "0",
+        "Y": "0"
+      },
+      "showNextIndex": "false",
+      "SpecialVariable": "0",
+      "isSpawnedObject": "false",
+      "readyForHarvest": "false",
+      "destroyOvernight": "false",
+      "parentSheetIndex": "198",
+      "minutesUntilReady": "0",
+      "hasBeenInInventory": "false"
+    },
+    "weddingToday": "false",
+    "currentSeason": "spring",
+    "goldenWalnuts": "0",
+    "specialOrders": null,
+    "weddingsToday": null,
+    "worldStateIDs": null,
+    "checkedGarbage": null,
+    "lostBooksFound": "0",
+    "raccoonBundles": {
+      "boolean": [
+        "false",
+        "false"
+      ]
+    },
+    "allowChatCheats": "false",
+    "broadcastedMail": {
+      "string": "%&SM&%landslideDone"
+    },
+    "elliottBookName": "The Rise And Fall Of Planet Yazzo",
+    "foundBuriedNuts": null,
+    "isDebrisWeather": "false",
+    "limitedNutDrops": null,
+    "locationWeather": {
+      "item": [
+        {
+          "key": {
+            "string": "Island"
+          },
+          "value": {
+            "LocationWeather": {
+              "Weather": "Sun",
+              "weather": {
+                "string": "Sun"
+              },
+              "IsRaining": "false",
+              "IsSnowing": "false",
+              "isRaining": {
+                "boolean": "false"
+              },
+              "isSnowing": {
+                "boolean": "false"
+              },
+              "IsGreenRain": "false",
+              "IsLightning": "false",
+              "isGreenRain": {
+                "boolean": "false"
+              },
+              "isLightning": {
+                "boolean": "false"
+              },
+              "IsDebrisWeather": "false",
+              "isDebrisWeather": {
+                "boolean": "false"
+              },
+              "WeatherForTomorrow": "Sun",
+              "weatherForTomorrow": {
+                "string": "Sun"
+              },
+              "monthlyNonRainyDayCount": {
+                "int": "20"
+              }
+            }
+          }
+        },
+        {
+          "key": {
+            "string": "Default"
+          },
+          "value": {
+            "LocationWeather": {
+              "Weather": "Sun",
+              "weather": {
+                "string": "Sun"
+              },
+              "IsRaining": "false",
+              "IsSnowing": "false",
+              "isRaining": {
+                "boolean": "false"
+              },
+              "isSnowing": {
+                "boolean": "false"
+              },
+              "IsGreenRain": "false",
+              "IsLightning": "false",
+              "isGreenRain": {
+                "boolean": "false"
+              },
+              "isLightning": {
+                "boolean": "false"
+              },
+              "IsDebrisWeather": "false",
+              "isDebrisWeather": {
+                "boolean": "false"
+              },
+              "WeatherForTomorrow": "Sun",
+              "weatherForTomorrow": {
+                "string": "Sun"
+              },
+              "monthlyNonRainyDayCount": {
+                "int": "15"
+              }
+            }
+          }
+        },
+        {
+          "key": {
+            "string": "Desert"
+          },
+          "value": {
+            "LocationWeather": {
+              "Weather": "Sun",
+              "weather": {
+                "string": "Sun"
+              },
+              "IsRaining": "false",
+              "IsSnowing": "false",
+              "isRaining": {
+                "boolean": "false"
+              },
+              "isSnowing": {
+                "boolean": "false"
+              },
+              "IsGreenRain": "false",
+              "IsLightning": "false",
+              "isGreenRain": {
+                "boolean": "false"
+              },
+              "isLightning": {
+                "boolean": "false"
+              },
+              "IsDebrisWeather": "false",
+              "isDebrisWeather": {
+                "boolean": "false"
+              },
+              "WeatherForTomorrow": "Sun",
+              "weatherForTomorrow": {
+                "string": "Sun"
+              },
+              "monthlyNonRainyDayCount": {
+                "int": "20"
+              }
+            }
+          }
+        }
+      ]
+    },
+    "minesDifficulty": "0",
+    "useLegacyRandom": "false",
+    "hasDedicatedHost": "false",
+    "timesFedRaccoons": "0",
+    "cellarAssignments": {
+      "item": {
+        "key": {
+          "int": "1"
+        },
+        "value": {
+          "long": "-7874050920758097816"
+        }
+      }
+    },
+    "farmerFriendships": null,
+    "globalInventories": null,
+    "perfectionWaivers": "0",
+    "returnedDonations": null,
+    "shuffleMineChests": "Default",
+    "countdownToWedding": {
+      "@xsi:nil": "true"
+    },
+    "goldenWalnutsFound": "0",
+    "highestPlayerLimit": "8",
+    "lastAppliedSaveFix": "98",
+    "splitscreenOptions": null,
+    "treasureTotemsUsed": "0",
+    "weatherForTomorrow": "Sun",
+    "collectedNutTracker": null,
+    "currentGemBirdIndex": "0",
+    "mineShrineActivated": "false",
+    "shouldSpawnMonsters": "false",
+    "uniqueIDForThisGame": "474747474",
+    "constructedBuildings": null,
+    "goldenCoconutCracked": "false",
+    "skullCavesDifficulty": "0",
+    "skullShrineActivated": "false",
+    "activatedGoldenParrot": "false",
+    "availableSpecialOrders": {
+      "SpecialOrder": [
+        {
+          "dueDate": "49",
+          "rewards": [
+            {
+              "amount": {
+                "int": "6000"
+              },
+              "@xsi:type": "MoneyReward",
+              "multiplier": {
+                "float": "1"
+              }
+            },
+            {
+              "host": {
+                "boolean": "false"
+              },
+              "noLetter": {
+                "boolean": "false"
+              },
+              "@xsi:type": "MailReward",
+              "grantedMails": {
+                "string": "ClintReward"
+              }
+            }
+          ],
+          "duration": "Week",
+          "questKey": "Clint",
+          "orderType": null,
+          "questName": "[Clint_Name]",
+          "requester": "Clint",
+          "objectives": {
+            "maxCount": "50",
+            "@xsi:type": "SlayObjective",
+            "description": "[Clint_Objective_0_Text]",
+            "targetNames": "Grub",
+            "currentCount": "0",
+            "failOnCompletion": "false",
+            "ignoreFarmMonsters": "true"
+          },
+          "questState": "InProgress",
+          "specialRule": null,
+          "generationSeed": "339170603",
+          "participantsIDs": null,
+          "readyForRemoval": "false",
+          "preSelectedItems": null,
+          "questDescription": "[Clint_Text]",
+          "appliedSpecialRules": "false",
+          "seenParticipantsIDs": null,
+          "unclaimedRewardsIDs": null,
+          "selectedRandomElements": {
+            "item": {
+              "key": {
+                "string": "Monster"
+              },
+              "value": {
+                "int": "3"
+              }
+            }
+          }
+        },
+        {
+          "dueDate": "49",
+          "rewards": [
+            {
+              "amount": {
+                "int": "1500"
+              },
+              "@xsi:type": "MoneyReward",
+              "multiplier": {
+                "float": "1"
+              }
+            },
+            {
+              "host": {
+                "boolean": "false"
+              },
+              "noLetter": {
+                "boolean": "false"
+              },
+              "@xsi:type": "MailReward",
+              "grantedMails": {
+                "string": "DemetriusReward"
+              }
+            }
+          ],
+          "duration": "Week",
+          "questKey": "Demetrius2",
+          "orderType": null,
+          "questName": "[Demetrius2_Name]",
+          "requester": "Demetrius",
+          "objectives": {
+            "maxCount": "20",
+            "@xsi:type": "FishObjective",
+            "description": "[Demetrius2_Objective_0_Text]",
+            "currentCount": "0",
+            "failOnCompletion": "false",
+            "acceptableContextTagSets": "fish_ocean"
+          },
+          "questState": "InProgress",
+          "specialRule": null,
+          "generationSeed": "1318097921",
+          "participantsIDs": null,
+          "readyForRemoval": "false",
+          "preSelectedItems": null,
+          "questDescription": "[Demetrius2_Text]",
+          "appliedSpecialRules": "false",
+          "seenParticipantsIDs": null,
+          "unclaimedRewardsIDs": null,
+          "selectedRandomElements": {
+            "item": {
+              "key": {
+                "string": "FishType"
+              },
+              "value": {
+                "int": "1"
+              }
+            }
+          }
+        },
+        {
+          "dueDate": "45",
+          "rewards": {
+            "amount": {
+              "int": "20"
+            },
+            "@xsi:type": "GemsReward"
+          },
+          "duration": "ThreeDays",
+          "questKey": "QiChallenge8",
+          "orderType": "Qi",
+          "questName": "[QiChallenge8_Name]",
+          "requester": "Qi",
+          "objectives": [
+            {
+              "maxCount": "1",
+              "@xsi:type": "FishObjective",
+              "description": "[QiChallenge8_Objective_0_Text]",
+              "currentCount": "0",
+              "failOnCompletion": "false",
+              "acceptableContextTagSets": "item_ms._angler"
+            },
+            {
+              "maxCount": "1",
+              "@xsi:type": "FishObjective",
+              "description": "[QiChallenge8_Objective_1_Text]",
+              "currentCount": "0",
+              "failOnCompletion": "false",
+              "acceptableContextTagSets": "item_glacierfish_jr."
+            },
+            {
+              "maxCount": "1",
+              "@xsi:type": "FishObjective",
+              "description": "[QiChallenge8_Objective_2_Text]",
+              "currentCount": "0",
+              "failOnCompletion": "false",
+              "acceptableContextTagSets": "item_son_of_crimsonfish"
+            },
+            {
+              "maxCount": "1",
+              "@xsi:type": "FishObjective",
+              "description": "[QiChallenge8_Objective_3_Text]",
+              "currentCount": "0",
+              "failOnCompletion": "false",
+              "acceptableContextTagSets": "item_radioactive_carp"
+            },
+            {
+              "maxCount": "1",
+              "@xsi:type": "FishObjective",
+              "description": "[QiChallenge8_Objective_4_Text]",
+              "currentCount": "0",
+              "failOnCompletion": "false",
+              "acceptableContextTagSets": "item_legend_ii"
+            }
+          ],
+          "questState": "InProgress",
+          "specialRule": "LEGENDARY_FAMILY",
+          "generationSeed": "339170603",
+          "participantsIDs": null,
+          "readyForRemoval": "false",
+          "preSelectedItems": null,
+          "questDescription": "[QiChallenge8_Text]",
+          "appliedSpecialRules": "false",
+          "seenParticipantsIDs": null,
+          "unclaimedRewardsIDs": null,
+          "selectedRandomElements": null
+        },
+        {
+          "dueDate": "49",
+          "rewards": {
+            "amount": {
+              "int": "25"
+            },
+            "@xsi:type": "GemsReward"
+          },
+          "duration": "Week",
+          "questKey": "QiChallenge5",
+          "orderType": "Qi",
+          "questName": "[QiChallenge5_Name]",
+          "requester": "Qi",
+          "objectives": {
+            "maxCount": "100",
+            "@xsi:type": "ReachMineFloorObjective",
+            "skullCave": {
+              "boolean": "true"
+            },
+            "description": "[QiChallenge5_Objective_0_Text]",
+            "currentCount": "0",
+            "failOnCompletion": "false"
+          },
+          "questState": "InProgress",
+          "specialRule": "SC_NO_FOOD",
+          "generationSeed": "1318097921",
+          "participantsIDs": null,
+          "readyForRemoval": "false",
+          "preSelectedItems": null,
+          "questDescription": "[QiChallenge5_Text]",
+          "appliedSpecialRules": "false",
+          "seenParticipantsIDs": null,
+          "unclaimedRewardsIDs": null,
+          "selectedRandomElements": null
+        }
+      ]
+    },
+    "completedSpecialOrders": null,
+    "junimoKartLeaderboards": {
+      "entries": null,
+      "maxEntries": {
+        "int": "10"
+      }
+    },
+    "visitsUntilY1Guarantee": "-1",
+    "mine_lowestLevelReached": "0",
+    "parrotPlatformsUnlocked": "false",
+    "miniShippingBinsObtained": "0",
+    "acceptedSpecialOrderTypes": null,
+    "mine_permanentMineChanges": null,
+    "moveBuildingPermissionMode": "0",
+    "hasApplied1_3_UpdateChanges": "true",
+    "hasApplied1_4_UpdateChanges": "true",
+    "seasonOfCurrentRaccoonBundle": "-1",
+    "mine_lowestLevelReachedForOrder": "-1",
+    "daysPlayedWhenLastRaccoonBundleWasFinished": "0"
+  }
+}

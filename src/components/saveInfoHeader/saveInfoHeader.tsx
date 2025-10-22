@@ -35,7 +35,7 @@ export function SaveInfoHeaderButtons({save}: SaveInfoHeaderProps) {
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
         }}>
-        <p className={"absolute top-[16px] left-[50%] translate-x-[-50%] font-stardewMain text-[var(--secondary-red)] text-[3.2rem]"}>
+        <p className={"absolute top-[9px] left-[50%] translate-x-[-50%] font-stardewMain text-[var(--secondary-red)] text-[3.2rem]"}>
           {t("saveInfoHeader.quests")}
         </p>
       </div>
@@ -47,7 +47,7 @@ export function SaveInfoHeaderButtons({save}: SaveInfoHeaderProps) {
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
         }}>
-        <p className={"absolute top-[20px] left-[50%] translate-x-[-50%] font-stardewMain text-[var(--secondary-red)] text-[3.2rem]"}>
+        <p className={"absolute top-[9px] left-[50%] translate-x-[-50%] font-stardewMain text-[var(--secondary-red)] text-[3.2rem]"}>
           {t("saveInfoHeader.bundles")}
         </p>
       </div>
@@ -59,7 +59,7 @@ export function SaveInfoHeaderButtons({save}: SaveInfoHeaderProps) {
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
         }}>
-        <p className={"absolute top-[20px] left-[50%] translate-x-[-50%] font-stardewMain text-[var(--secondary-red)] text-[3.2rem]"}>
+        <p className={"absolute top-[9px] left-[50%] translate-x-[-50%] font-stardewMain text-[var(--secondary-red)] text-[3.2rem]"}>
           {t("saveInfoHeader.social")}
         </p>
       </div>

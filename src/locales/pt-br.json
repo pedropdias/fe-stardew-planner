@@ -85,6 +85,10 @@
     "text2": "descomprima o zip do mod e adicione na sua pasta Mods nos arquivos do jogo",
     "text3": "e",
     "text4": "jogue em um save para aparecer aqui",
-    "buttonText": "Baixe o mod"
+    "downloadButtonText": "Baixe o mod",
+    "text5": "Se quiser testar as funcionalidades do Stardew Valley",
+    "text6": "sem integração com o mod no jogo",
+    "text7": "crie um Save Demo e explore os recursos disponíveis de gerenciamento",
+    "createSaveButtonText": "Crie um save demo"
   }
 }

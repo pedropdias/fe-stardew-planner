@@ -3,6 +3,7 @@ import {API_ENDPOINTS} from "@/api/endpoints";
 import {DeleteSaveForm} from "@/api/forms/delete-save.form";
 import {SaveType} from "@/types/saveType";
 import {DeleteSaveResponse} from "@/api/responses/delete-save.response";
+import {CreateDemoSaveForm} from "@/api/forms/create-demo-save.form";
 
 export const getSaves = async (userId: string): Promise<SaveType[]> => {
   const response = await api.get(API_ENDPOINTS.GET_SAVES.replace(":userId", userId));
@@ -13,5 +14,10 @@ export const deleteSave = async (deleteSaveForm: DeleteSaveForm): Promise<Delete
   const response = await api.delete(API_ENDPOINTS.SAVE, {
     data: deleteSaveForm,
   });
+  return response?.data;
+}
+
+export const createDemoSave = async (createDemoSaveForm: CreateDemoSaveForm): Promise<string> => {
+  const response = await api.post(API_ENDPOINTS.DEMO_SAVE, createDemoSaveForm);
   return response?.data;
 }

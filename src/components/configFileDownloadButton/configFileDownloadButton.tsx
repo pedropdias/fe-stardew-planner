@@ -5,9 +5,10 @@ import {useAppContextProvider} from "@/providers/AppContextProvider";
 interface DownloadModButtonProps {
   userId: string,
   email: string,
+  disabled: boolean,
 }
 
-export default function DownloadModButton({ userId, email }: DownloadModButtonProps) {
+export default function DownloadModButton({ userId, email, disabled }: DownloadModButtonProps) {
   const { t } = useAppContextProvider();
 
   const handleDownload = async () => {
@@ -47,8 +48,9 @@ export default function DownloadModButton({ userId, email }: DownloadModButtonPr
         backgroundRepeat: "no-repeat",
         textShadow: "2px 2px 0px rgba(135,52,0,0.5)",
       }}
+      disabled={disabled}
     >
-      {t("savesFallback.buttonText")}
+      {t("savesFallback.downloadButtonText")}
     </button>
   );
 }

@@ -307,7 +307,7 @@ export default function SavePage() {
         </div>
         <div className="flex justify-start w-full h-full gap-[100px] px-[24px] py-[8px]">
           <PlannersSideBar setShowModal={setShowModal}/>
-          <div className={"flex flex-col items-start gap-[72px] w-full max-w-[2200px] mr-[56px]"}>
+          <div className={"flex flex-col items-start gap-[80px] w-full max-w-[2200px] mr-[56px]"}>
             {currentSave && <SaveInfoHeader save={currentSave}/>}
             {selectedPlanner && <PlannerBoard planner={selectedPlanner} setShowEditModal={setShowEditModal}
                                               setShowCreateTaskModal={setShowCreateTaskModal}
