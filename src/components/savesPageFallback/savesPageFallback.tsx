@@ -13,14 +13,16 @@ export default function SavesPageFallback() {
   useEffect(() => {
     if (authLoading) return;
     if (!user) {
-      router.replace("/login")
+      setButtonDisabled(true);
+      router.replace("/login");
+    } else {
+      setButtonDisabled(false);
     }
   }, [authLoading, user, router]);
 
-  if (!user) {
-    setButtonDisabled(true);
+  if (authLoading || !user) {
     return null;
-  };
+  }
 
   return (
     <div
